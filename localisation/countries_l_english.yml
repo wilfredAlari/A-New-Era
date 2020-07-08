@@ -3257,8 +3257,6 @@
  URB:0 "Urbino"
  URB_DEF:0 "Urbino"
  URB_ADJ:0 "Urbinese"
-<<<<<<< HEAD
-=======
 
 SMI_fascism:0 "Sapmi"
  SMI_fascism_DEF:0 "the Sapmi"
@@ -3343,4 +3341,3 @@ SMI_fascism:0 "Sapmi"
  DAG:0 "Dagestan"
  DAG_DEF:0 "Dagestan"
  DAG_ADJ:0 "Dagestani"
->>>>>>> be90fe15bb73a328d49c3e3c2b362a893938c947

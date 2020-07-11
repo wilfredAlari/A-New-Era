@@ -781,10 +781,7 @@ URB = {
 	color_ui = rgb { 162 194 211 }
 }
 ###
-WEP = {
-	color = rgb { 82  52  106 }
-	color_ui = rgb { 82  52  106 }
-}
+
 BRN = {
 	color = rgb {175 15 15 }
 	color_ui = rgb { 175 15 15 }

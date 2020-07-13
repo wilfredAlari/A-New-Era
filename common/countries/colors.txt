@@ -838,10 +838,7 @@ FRK = {
 	color = rgb{255 229 104}
 	color_ui = rgb{255 229 104}
 }
-BRE = {
-	color = rgb{0 148 255}
-	color_ui = rgb{0 148 255}
-}
+
 POM = {
 	color = rgb{64 124 70}
 	color_ui = rgb{64 124 70}

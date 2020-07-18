@@ -2,25 +2,14 @@ state={
 	id=904
 	name="Ravensburg"
 	resources={
-		aluminium=6 # was: 10.000
+		aluminium=6.000
 	}
 
-	state_category = large_city
 	history={
 		owner = RAV
 		victory_points = {
-			9517 20
+			9517 20 
 		}
-		
-		#victory_points = {
-		#	3530 10
-		#}
-		#victory_points = {
-		#	11640 1
-		#}
-		#victory_points = {
-		#	6712 3
-		#}
 		buildings = {
 			infrastructure = 8
 			arms_factory = 3
@@ -41,8 +30,9 @@ state={
 	}
 
 	provinces={
-		3690 6934 9655 3679
+		3679 3690 6934 9655 13126 
 	}
 	manpower=2500000
 	buildings_max_level_factor=1.000
+	state_category=large_city
 }

@@ -11,17 +11,17 @@ state={
 	}
 
 	history={
-		owner = SOV
+		owner = DAG
 		buildings = {
 			infrastructure = 4
 		}
 		victory_points = {
 			3672 5 
 		}
-		add_core_of = SOV
+		add_core_of = DAG
 	}
 
 	provinces={
-		683 700 712 728 1450 3668 3672 3682 3711 4463 6689 6701 6730 6748 7554 7624 9645 11632 
+	666 700 1450 1455 3668 3711 3682 6701 6689 7554 9645
 	}
 }

@@ -1,9 +1,14 @@
 state={
 	id=818
 	name="STATE_818"
+	history={
+		owner = DEN
+		add_core_of = DEN
+	}
 	provinces={
 		332 11251 
 	}
-	manpower=0
+	manpower=25000
 	buildings_max_level_factor=1.000
+	state_category=town
 }

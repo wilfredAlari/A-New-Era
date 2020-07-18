@@ -1,12 +1,12 @@
 state={
-	id=817
-	name="STATE_817"
+	id=913
+	name="STATE_797"
 	history={
-		owner = DEN
-		add_core_of = DEN
+		owner = BRN
+		add_core_of = BRN
 	}
 	provinces={
-		6361 
+		6521 
 	}
 	manpower=25000
 	buildings_max_level_factor=1.000

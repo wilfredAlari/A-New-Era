@@ -223,6 +223,7 @@ HES = "countries/Hesse.txt"
 MUN = "countries/Munster.txt"
 BRU = "countries/Brunswick.txt"
 LUN = "countries/Luneburg.txt"
+BRE = "countries/Bremen.txt"
 
 
 BRI = "countries/Brittany.txt"

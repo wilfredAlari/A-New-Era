@@ -33,10 +33,6 @@ AUS = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
-LIT = {
-	color = rgb { 219 219 119 }
-	color_ui = rgb { 255 255 155 }
-}
 EST = {
 	color = rgb { 50 135 175 }
 	color_ui = rgb { 99 204 254 }
@@ -709,6 +705,10 @@ ENG = {
 FRA = {
 	color = rgb { 67 83 173 }
 	color_ui = rgb { 67 83 173 }
+}
+LIT = {
+	color = rgb { 157 0 165 }
+	color_ui = rgb { 157 0 165 }
 }
 
 

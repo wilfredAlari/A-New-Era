@@ -1,0 +1,38 @@
+state={
+	id=808
+	name="Ravensburg"
+	resources={
+		aluminium=6.000
+	}
+
+	history={
+		owner = RAV
+		victory_points = {
+			9517 20 
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 3
+			industrial_complex = 2
+			air_base = 3
+
+		}
+		add_core_of = RAV
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 11
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		3679 3690 6934 9655 13126 
+	}
+	manpower=2500000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,7 +1,7 @@
 
 state={
 	id=852
-	name="Köln"
+	name="Koln"
 	manpower = 6144743
 	resources={
 		steel=30 # was: 54

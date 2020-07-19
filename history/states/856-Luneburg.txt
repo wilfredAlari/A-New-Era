@@ -1,7 +1,7 @@
 
 state={
 	id=856
-	name="Lüneburg"
+	name="Luneburg"
 	resources={
 		oil=2.000
 	}

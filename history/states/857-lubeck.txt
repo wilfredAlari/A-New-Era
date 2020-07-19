@@ -1,7 +1,7 @@
 
 state={
 	id=857
-	name="Lübeck"
+	name="Lubeck"
 
 	history={
 		victory_points = {

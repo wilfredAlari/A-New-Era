@@ -1,7 +1,7 @@
 
 state={
 	id=840
-	name="Northern Croatia" # Dalmatia
+	name="Northern_Croatia" # Dalmatia
 	manpower = 1431700
 
 	state_category = large_town

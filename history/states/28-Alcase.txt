@@ -1,7 +1,7 @@
 
 state={
 	id=28
-	name="Elsaß" # Alsace-Lorraine
+	name="Elsab" # Alsace-Lorraine
 	manpower = 1915600
 	
 	state_category = city

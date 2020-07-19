@@ -1,6 +1,6 @@
 state={
 	id=855
-	name="Münster"
+	name="Munster"
 	manpower = 2058467
 	
 	state_category = city

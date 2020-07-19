@@ -1,7 +1,7 @@
 
 state={
 	id=861
-	name="Süd-Schleswig"
+	name="Sud-Schleswig"
 
 	history={
 		victory_points = {

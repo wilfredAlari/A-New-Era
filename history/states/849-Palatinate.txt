@@ -1,7 +1,7 @@
 
 state={
 	id=849
-	name="the Palatinate"
+	name="the_Palatinate"
 	manpower = 3027739
 	resources={
 		steel=59 # was: 100

@@ -7,15 +7,7 @@ state={
 
 	history={
 		owner = MUN
-		victory_points = {
-			241 5 
-		}
-		victory_points = {
-			11360 1
-		}
-		victory_points = {
-			11388 5
-		}
+		
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 2

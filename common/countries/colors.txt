@@ -872,3 +872,39 @@ LUN = {
 	color = rgb{255 106 0}
 	color_ui = rgb{255 106 0}
 }
+BRE = {
+	color = rgb{255 106 255}
+	color_ui = rgb{255 106 255}
+}
+VER = {
+	color = rgb{178 0 255}
+	color_ui = rgb{178 0 255}
+}
+DIE = {
+	color = rgb{12 73 1}
+	color_ui = rgb{12 73 1}
+}
+EFR = {
+	color = rgb{104 41 0}
+	color_ui = rgb{104 41 0}
+}
+HAM = {
+	color = rgb{255 127 127}
+	color_ui = rgb{255 127 127}
+}
+LUB = {
+	color = rgb{192 192 192}
+	color_ui = rgb{192 192 192}
+}
+HLS = {
+	color = rgb{91 91 91}
+	color_ui = rgb{91 91 91}
+}
+OLD = {
+	color = rgb{200 200 200}
+	color_ui = rgb{200 200 200}
+}
+DOR = {
+	color = rgb{155 155 155}
+	color_ui = rgb{155 155 155}
+}

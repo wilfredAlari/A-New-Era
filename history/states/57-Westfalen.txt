@@ -7,9 +7,7 @@ state={
 
 	history={
 		owner = CLG
-		victory_points = {
-			495 5 
-		}
+		
 		#victory_points = {
 		#	9509 1
 		#}

@@ -12,9 +12,7 @@ state={
 	
 	history={
 		owner = CLG
-		victory_points = {
-			6469 10 
-		}
+		
 		victory_points = {
 			587 5 
 		}

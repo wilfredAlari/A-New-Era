@@ -1,7 +1,7 @@
 
 state={
 	id=857
-	name="Lubeck"
+	name="Lübeck"
 
 	history={
 		victory_points = {
@@ -10,7 +10,7 @@ state={
 		victory_points = {
 			9347 20 
 		}
-		owner = GER
+		owner = LUB
 		buildings = {
 			infrastructure = 6
 			arms_factory = 2
@@ -22,7 +22,7 @@ state={
 			}
 
 		}
-		add_core_of = GER
+		add_core_of = LUB
 		1939.1.1 = {
 			buildings = {
 				synthetic_refinery = 3

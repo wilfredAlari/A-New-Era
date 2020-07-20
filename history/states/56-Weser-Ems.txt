@@ -1,21 +1,16 @@
 state={
 	id=56
-	name="STATE_56"
+	name="Oldenburg"
 	manpower = 2058467
 	
 	state_category = city
 
 	history={
-		owner = GER
+		owner = OLD
 		victory_points = {
 			241 5 
 		}
-		victory_points = {
-			11360 1
-		}
-		victory_points = {
-			11388 5
-		}
+		
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 2
@@ -28,7 +23,7 @@ state={
 			air_base = 3
 
 		}
-		add_core_of = GER
+		add_core_of = OLD
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

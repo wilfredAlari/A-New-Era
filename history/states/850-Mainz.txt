@@ -13,12 +13,8 @@ state={
 			arms_factory = 1
 			industrial_complex = 2
 		}
-		victory_points = {
-			6488 20.0 
-		}
-		victory_points = {
-			564 3
-		}
+		
+
 		add_core_of = MAI
 
 		1939.1.1 = {

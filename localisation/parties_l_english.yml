@@ -9,7 +9,7 @@
  fascism_desc:0 "Absolutist Regime"
  communism_desc:0 "Horde"
  democratic_desc:0 "Republican Regime"
-
+ 
  conservatism:0 "Conservatism"
  conservatism_desc:0 "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
  liberalism:0 "Liberalism"
@@ -35,9 +35,9 @@
  rexism:0 "Rexism"
  rexism_desc:0 "Strongly opposed to both liberal and communist ideals, Rexism is a staunchly conservative nationalist movement who advocate a corporatist economic policy. Employing increasingly populist and authoritarian rhetoric, their ideals are shifting closer to other fascist movements."
 
- neutrality:0 "Non-Aligned"
- neutrality_noun:0 "Non-Aligned"
- neutrality_desc:0 "Authoritarian Regime"
+ neutrality:0 "Aristocratic"
+ neutrality_noun:0 "Aristocracy"
+ neutrality_desc:0 "Aristocratic Government"
 
  despotism:0 "Despotic"
  despotism_desc:0 "Despotism is a form of government in which a single person rules with absolute power."

@@ -1,9 +1,9 @@
 state={
 	id=863
-	name="STATE_799"
+	name="Bremen"
 	history={
-		owner = GER
-		add_core_of = GER
+		owner = BRE
+		add_core_of = BRE
 	}
 	provinces={
 		3326 

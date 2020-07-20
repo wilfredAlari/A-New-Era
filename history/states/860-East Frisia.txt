@@ -4,13 +4,8 @@ state={
 	name="Ostfriesland"
 
 	history={
-		victory_points = {
-			6389 10 
-		}
-		victory_points = {
-			9347 20 
-		}
-		owner = GER
+		
+		owner = EFR
 		buildings = {
 			infrastructure = 6
 			arms_factory = 2
@@ -22,7 +17,7 @@ state={
 			}
 
 		}
-		add_core_of = GER
+		add_core_of = EFR
 		1939.1.1 = {
 			buildings = {
 				synthetic_refinery = 3

@@ -13,10 +13,7 @@ state={
 		
 		owner = ANS
 		add_core_of = ANS
-		victory_points = { 11435 5 }
-		victory_points = {
-			11499 10
-		}
+		
 		buildings = {
 			infrastructure = 8
 			arms_factory = 1

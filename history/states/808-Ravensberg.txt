@@ -7,9 +7,7 @@ state={
 
 	history={
 		owner = RAV
-		victory_points = {
-			9517 20 
-		}
+		
 		buildings = {
 			infrastructure = 8
 			arms_factory = 3

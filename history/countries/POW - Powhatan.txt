@@ -1,0 +1,83 @@
+﻿capital = 361
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_variable = { adm_limit = 6 }
+}
+	
+set_technology = {
+	infantry_weapons = 1
+}
+set_variable = { numnasled_value = 6 }
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 78
+	communism = 0
+	neutrality = 22
+	democratic = 0
+}	
+
+create_country_leader = {
+	name = "Xicohtencatl III"
+	desc = ""
+	picture = "gfx/characters/Xicohtencatl III.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xicohtencatl III"
+	desc = ""
+	picture = "gfx/characters/Xicohtencatl III.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xicohtencatl III"
+	desc = ""
+	picture = "gfx/characters/Xicohtencatl III.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Xicohtencatl III"
+	desc = ""
+	picture = "gfx/characters/Xicohtencatl III.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Syntheua"
+	gfx = "GFX_AZTEC"
+	traits = {  }
+	skill = 4
+
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
+}

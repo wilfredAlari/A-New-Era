@@ -912,3 +912,7 @@ TRA = {
 	color = rgb{160 160 62}
 	color_ui = rgb{1160 160 62}
 }
+
+CHE = {
+	color = rgb { 141 173 46 }
+	color_ui = rgb { 110 135 36 } }

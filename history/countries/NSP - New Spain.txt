@@ -1,6 +1,5 @@
-﻿﻿capital = 41
+﻿﻿capital = 277
 
-oob = "SPR_1936"
 set_research_slots = 3
 
 set_technology = {
@@ -30,26 +29,10 @@ set_technology = {
 	}
 
 	create_country_leader = {
-		name = "Charles I"
-		picture = "portrait_charles_i.dds"
+		name = "Luis de Velasco"
+		picture = ""
 		ideology = despotism
 		traits = { }
 	}
 
 }
-
-set_autonomy = {
-		target = NAP
-		autonomous_state = autonomy_puppet
-	}
-
-set_autonomy = {
-		target = NSP
-		autonomous_state = autonomy_colony
-	}
-
-set_autonomy = {
-		target = SPP
-		autonomous_state = autonomy_colony
-	}
-	

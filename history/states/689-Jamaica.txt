@@ -6,7 +6,7 @@ state={
 	state_category = town
 
 	history={
-		owner = SPR
+		owner = NSP
 	    add_core_of = XXX
 		
 		victory_points = {

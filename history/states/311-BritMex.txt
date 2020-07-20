@@ -8,7 +8,7 @@ state=
 	history=
 	{
 		add_core_of = XXX
-		owner = SPR
+		owner = NSP
 		victory_points = {
 			2077 1 
 		}

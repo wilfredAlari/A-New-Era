@@ -12,7 +12,7 @@ state={
 	}
 
 	history={
-		owner = SPR
+		owner = XXX
 	    add_core_of = XXX
 		buildings = {
 			infrastructure = 4

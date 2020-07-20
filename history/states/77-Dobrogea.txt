@@ -1,5 +1,5 @@
 
-state={
+state={ 
 	id=77
 	name="STATE_77"
 	manpower = 378000
@@ -10,16 +10,17 @@ state={
 		victory_points = {
 			11597 1
 		}
-		owner = ROM
+		owner = TUR
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 		}
-		add_core_of = ROM
-		add_claim_by = BUL
+		
+		add_core_of = TUR
+		add_core_of = BUL
 	}
 
 	provinces={
-		9614 11597 
+		9614 11597 657 9635 687
 	}
 }

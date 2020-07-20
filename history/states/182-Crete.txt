@@ -7,7 +7,7 @@ state=
 	state_category = rural
 	history=
 	{
-		owner = GRE
+		owner = VNI
 		victory_points = {
 			9940 5
 		}
@@ -26,6 +26,7 @@ state=
 			}
 		}
 		add_core_of = GRE
+		add_core_of = VNI
 	}
 	provinces=
 	{

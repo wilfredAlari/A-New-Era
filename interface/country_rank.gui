@@ -1,0 +1,28 @@
+
+
+guiTypes = {
+
+	
+	containerWindowType = {
+		name = "country_rank_container"
+		position = { x = 245 y = 0 }     
+	
+
+		
+		
+		
+		instantTextBoxType = {
+			name = "country_rank"
+			position = { x= -10 y = 4 }
+			font = "hoi_18mbs"
+			text = country_rank
+			format = left
+			maxWidth = 144
+			maxHeight = 40
+			fixedsize = yes
+		
+			pdx_tooltip = country_rank
+		}
+	}
+	
+}

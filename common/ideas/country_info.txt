@@ -1,0 +1,249 @@
+ideas = {
+
+	
+	
+	government_rank = {
+		law = yes
+		use_list_view = yes
+		government_rank_1 = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.125
+			}
+			
+			default = yes
+			level = 1
+			cancel_if_invalid = no
+		}
+		government_rank_2 = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+			}
+			available = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = has_500_money		
+						check_variable = {money > 500}
+					}
+					
+					OR = {
+						num_of_controlled_states > 20
+						num_of_factories > 40
+					}
+				}
+			}
+			on_add = {
+				add_to_variable = {
+					money = -500
+				}
+			}
+			default = no
+			level = 2
+			cancel_if_invalid = no
+		}
+		government_rank_3 = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.5
+			}
+			on_add = {
+				add_to_variable = {
+					money = -1000
+				}
+			}
+			available = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = has_1000_money		
+						check_variable = {money > 1000}
+					}
+					OR = {
+						num_of_controlled_states > 40
+						num_of_factories > 75
+					}
+				}
+				has_idea = government_rank_2 
+			}
+			default = no
+			level = 3
+			cancel_if_invalid = no
+		}
+	}
+	religion = {
+		law = yes
+		use_list_view = yes
+		catholic = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			available = {
+				OR = {
+					has_idea = catholic
+					has_idea = orthodox
+					has_idea = protestant
+					has_idea = reformed
+					has_idea = anglican
+				}
+			}
+			modifier = {
+				political_power_factor = 0.25
+			}
+			
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		protestant = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+			}
+			available = {
+				OR = {
+					has_idea = catholic
+					has_idea = orthodox
+					has_idea = protestant
+					has_idea = reformed
+					has_idea = anglican
+				}
+			}
+			
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		reformed = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.125
+				consumer_goods_factor = -0.025
+				production_factory_efficiency_gain_factor = 0.125
+				production_factory_max_efficiency_factor = 0.125
+			}
+			available = {
+				OR = {
+					has_idea = catholic
+					has_idea = orthodox
+					has_idea = protestant
+					has_idea = reformed
+					has_idea = anglican
+				}
+			}
+			
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		orthodox = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+			}
+			
+			available = {
+				OR = {
+					has_idea = catholic
+					has_idea = orthodox
+					has_idea = protestant
+					has_idea = reformed
+					has_idea = anglican
+				}
+			}
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		anglican = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.5
+			}
+			
+			available = {
+				OR = {
+					has_idea = catholic
+					has_idea = orthodox
+					has_idea = protestant
+					has_idea = reformed
+					has_idea = anglican
+				}
+				OR = {
+					original_tag = ENG
+					is_subject_of = ENG
+				}
+			}
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		sunni = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.33
+			}
+			
+			available = {
+				has_idea = shia
+			}
+			default = no
+		
+			cancel_if_invalid = no
+		}
+		shia = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.33
+			}
+			
+			available = {
+				has_idea = sunni
+			}
+			default = no
+		
+			cancel_if_invalid = no
+		}
+	}
+
+
+
+}

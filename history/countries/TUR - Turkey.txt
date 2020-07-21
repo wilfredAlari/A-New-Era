@@ -144,6 +144,7 @@ set_popularities = {
 	democratic = 10
 	fascism = 90
 }
+add_ideas = sunni
 puppet = MOL
 puppet = ROM
 puppet = TRA

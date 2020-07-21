@@ -1,0 +1,18 @@
+scripted_gui = {
+
+	
+	country_rank_gui = {
+		context_type = selected_country_context
+
+		window_name = "country_rank_container"
+		parent_window_token = selected_country_view_diplomacy
+
+		visible = {
+		  always = yes
+		}
+
+		effects = { }
+	}
+   
+}
+

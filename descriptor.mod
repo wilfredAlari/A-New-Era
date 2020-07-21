@@ -10,5 +10,5 @@ tags={
 }
 picture="thumbnail.png"
 supported_version="1.9.*"
-path="mod/A-New-Era"
+path="C:/Users/Megaport/Documents/Paradox Interactive/Hearts of Iron IV/mod/A-New-Era"
 remote_file_id="2165863750"

@@ -1,0 +1,32 @@
+
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_catholic"
+		texturefile = "gfx/interface/ideas/catholic.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_idea_protestant"
+		texturefile = "gfx/interface/ideas/protestant.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_reformed"
+		texturefile = "gfx/interface/ideas/reformed.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_anglican"
+		texturefile = "gfx/interface/ideas/anglican.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_orthodox"
+		texturefile = "gfx/interface/ideas/orthodox.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_shia"
+		texturefile = "gfx/interface/ideas/shia.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_sunni"
+		texturefile = "gfx/interface/ideas/sunni.dds"			
+	}
+}

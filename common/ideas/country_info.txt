@@ -86,7 +86,7 @@ ideas = {
 		law = yes
 		use_list_view = yes
 		catholic = {
-			
+			picture = catholic
 		
 			cost = 150
 			removal_cost = -1
@@ -109,7 +109,7 @@ ideas = {
 		}
 		protestant = {
 			
-		
+			picture = protestant
 			cost = 150
 			removal_cost = -1
 			
@@ -134,7 +134,7 @@ ideas = {
 		}
 		reformed = {
 			
-		
+			picture = reformed
 			cost = 150
 			removal_cost = -1
 			
@@ -160,7 +160,7 @@ ideas = {
 		}
 		orthodox = {
 			
-		
+			picture = orthodox
 			cost = 150
 			removal_cost = -1
 			
@@ -183,7 +183,7 @@ ideas = {
 		}
 		anglican = {
 			
-		
+			picture = anglican
 			cost = 150
 			removal_cost = -1
 			
@@ -210,7 +210,7 @@ ideas = {
 		}
 		sunni = {
 			
-		
+			picture = sunni
 			cost = 150
 			removal_cost = -1
 			
@@ -227,7 +227,7 @@ ideas = {
 		}
 		shia = {
 			
-		
+			picture = shia
 			cost = 150
 			removal_cost = -1
 			

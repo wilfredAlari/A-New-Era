@@ -710,10 +710,6 @@ LIT = {
 	color = rgb { 157 0 165 }
 	color_ui = rgb { 157 0 165 }
 }
-MLT = {
-	color = rgb { 226 0 83 }
-	color_ui = rgb { 226 0 83 }
-}
 
 
 
@@ -916,13 +912,25 @@ TRA = {
 	color = rgb{160 160 62}
 	color_ui = rgb{1160 160 62}
 }
-
 CHE = {
 	color = rgb { 141 173 46 }
-	color_ui = rgb { 110 135 36 } 
-	}
-	
-RUS = {
-	color = rgb { 72 143 68 }
-	color_ui = rgb { 72 143 68 }
+	color_ui = rgb { 110 135 36 }
 }
+SPP = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}
+NSP = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 255 255 122 }
+}			
+BPC = {
+	color = rgb { 39 116 70 }
+	color_ui = rgb { 51 151 91 }
+}	
+INC = {
+	color = rgb { 196 189 204 }
+	color_ui = rgb { 255 246 255 }
+}
+
+			

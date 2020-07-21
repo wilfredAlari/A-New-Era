@@ -12,7 +12,7 @@ state={
 
 
 	history={
-		owner = XXX
+		owner = CHE
 
 		buildings = {
 			infrastructure = 5

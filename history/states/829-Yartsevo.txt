@@ -3,12 +3,13 @@ state={
 	name="STATE_829"
 
 	history={
-		owner = SOV
-		add_core_of = SOV
+		owner = RUS
+		add_core_of = RUS
+
 	}
 
 	provinces={
-		335 3279 3313 6273 9272 9399 11254 11384 
+		335 3279 3313 6273 6303 9272 9399 11254 11384 
 	}
 	manpower=25000
 	buildings_max_level_factor=1.000

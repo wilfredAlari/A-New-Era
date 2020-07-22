@@ -710,11 +710,16 @@ LIT = {
 	color = rgb { 157 0 165 }
 	color_ui = rgb { 157 0 165 }
 }
-
-
+RUS = {
+	color = rgb { 72 143 68 }
+	color_ui = rgb { 72 143 68 }
+}
+MLT = {
+	color = rgb { 226 0 83 }
+	color_ui = rgb { 226 0 83 }
+}
 
 #######
-
 
 SVY = {
 	color = rgb { 0 127 23 }
@@ -932,5 +937,3 @@ INC = {
 	color = rgb { 196 189 204 }
 	color_ui = rgb { 255 246 255 }
 }
-
-			

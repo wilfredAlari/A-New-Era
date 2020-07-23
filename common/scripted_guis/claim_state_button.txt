@@ -1,0 +1,65 @@
+	scripted_gui = {
+	uncoring_button_powers = {
+	
+		context_type = selected_state_context
+		
+		window_name = "claim_state_button"
+		
+		visible = {
+			NOT = {
+				is_claimed_by = ROOT
+				is_owned_by = ROOT
+			}
+
+		}
+		
+		effects = {
+			claim_state_click = {	
+				add_claim_by = ROOT
+				ROOT = {
+					add_political_power = -50
+				}
+			}
+		}
+		
+		triggers = {
+			claim_state_click_enabled = {
+				ROOT = {
+					has_political_power > 49.9
+				}
+			}
+		}
+		        
+		ai_check = {
+			OR = {
+				date > 01.01.1552
+				has_war = yes
+			}
+		}
+		ai_test_interval = 2400
+        ai_test_variance = 1
+		ai_check_scope = {
+			any_neighbor_state = {
+				is_owned_by = ROOT
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						has_war = yes
+					}
+				}
+				OWNER = {
+					has_war_with = ROOT
+				}
+			}
+		 }
+		ai_weights = {
+			claim_state_click = {
+				ai_will_do = {
+					factor = 10000
+				}
+			}
+		}
+	}
+}
+

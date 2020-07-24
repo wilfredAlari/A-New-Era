@@ -1,0 +1,19 @@
+state={
+	id=911
+	name="STATE_911"
+	history={
+		owner = HAD
+		add_core_of = HAD
+		
+		victory_points = {
+			12821 5
+		}
+
+	}
+	provinces={
+		2029 12821 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

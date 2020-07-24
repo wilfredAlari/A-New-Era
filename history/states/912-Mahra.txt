@@ -1,0 +1,19 @@
+state={
+	id=912
+	name="STATE_912"
+	history={
+		owner = MAH
+		add_core_of = MAH
+		
+		victory_points = {
+			13079 5 
+		}
+
+	}
+	provinces={
+		13079 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

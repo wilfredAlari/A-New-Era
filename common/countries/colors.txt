@@ -213,10 +213,6 @@ SAF = {
 	color = rgb { 195 107 160 }
 	color_ui = rgb { 198 169 248 }
 }
-SAU = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
-}
 SIA = {
 	color = rgb { 171 190 152 }
 	color_ui = rgb { 222 247 198 }
@@ -718,8 +714,12 @@ MLT = {
 	color = rgb { 226 0 83 }
 	color_ui = rgb { 226 0 83 }
 }
+SAU = {
+	color = rgb { 34 107 51 }
+	color_ui = rgb { 34 107 51 }
+}
 
-#######
+#######Italy
 
 SVY = {
 	color = rgb { 0 127 23 }
@@ -936,4 +936,46 @@ BPC = {
 INC = {
 	color = rgb { 196 189 204 }
 	color_ui = rgb { 255 246 255 }
+}
+
+###Arabia
+HAD = {
+	color = rgb { 120 137 79 }
+	color_ui = rgb { 120 137 79 }
+}
+MAH = {
+	color = rgb { 125 192 193 }
+	color_ui = rgb { 125 192 193 }
+}
+NAJ = {
+	color = rgb { 154 138 206 }
+	color_ui = rgb { 154 138 206 }
+}
+RAS = {
+	color = rgb { 188 63 54 }
+	color_ui = rgb { 188 63 54 }
+}
+MIK = {
+	color = rgb { 155 78 170 }
+	color_ui = rgb { 155 78 170 }
+}
+DAW = {
+	color = rgb { 39 130 163 }
+	color_ui = rgb { 39 130 163 }
+}
+HOR = {
+	color = rgb { 206 187 82 }
+	color_ui = rgb { 206 187 82 }
+}
+YAS = {
+	color = rgb { 152 206 171 }
+	color_ui = rgb { 152 206 171 }
+}
+SHA = {
+	color = rgb { 229 188 126 }
+	color_ui = rgb { 229 188 126 }
+}
+ANI = {
+	color = rgb { 128 158 186 }
+	color_ui = rgb { 128 158 186 }
 }

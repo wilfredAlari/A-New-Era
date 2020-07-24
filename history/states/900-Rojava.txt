@@ -1,0 +1,14 @@
+state={
+	id=900
+	name="STATE_900"
+	history={
+		owner = TUR
+		add_core_of = TUR
+		}
+	provinces={
+		901 1549 1578 1606 1634 6883 10882 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category = town
+}

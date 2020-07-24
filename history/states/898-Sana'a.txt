@@ -1,0 +1,24 @@
+state={
+	id=898
+	name="STATE_898"
+
+	history={
+		owner = TUR
+		add_core_of = TUR
+		
+		victory_points = {
+			10752 5 
+		}
+
+	}
+	
+	
+	
+
+	provinces={
+		10752 10840 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

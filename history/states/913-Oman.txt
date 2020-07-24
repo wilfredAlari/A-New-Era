@@ -1,0 +1,19 @@
+state={
+	id=913
+	name="STATE_913"
+	history={
+		owner = OMA
+		add_core_of = OMA
+		
+		victory_points = {
+			5049 5 
+		}
+
+	}
+	provinces={
+		5049 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

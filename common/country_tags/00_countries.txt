@@ -270,3 +270,16 @@ NSP	= "countries/New Spain.txt"
 SPP	= "countries/Spanish Peru.txt"
 RUS	= "countries/Russia.txt"
 BPC	= "countries/Colonial Brazil.txt"
+
+###Arabia
+
+HAD	= "countries/Hadramut.txt"
+MAH	= "countries/Mahra.txt"
+NAJ = "countries/Najran.txt"
+RAS = "countries/Rassids.txt"
+MIK = "countries/Mikhlaf.txt"
+DAW = "countries/Dawasir.txt"
+HOR = "countries/Hormuz.txt"
+YAS = "countries/Yas.txt"
+SHA = "countries/Shammar.txt"
+ANI = "countries/Annizah.txt"

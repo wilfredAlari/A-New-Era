@@ -1,0 +1,15 @@
+state={
+	id=918
+	name="STATE_918"
+	history={
+		owner = POR
+		add_core_of = POR
+
+	}
+	provinces={
+		8000 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

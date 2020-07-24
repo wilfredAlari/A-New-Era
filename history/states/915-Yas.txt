@@ -1,0 +1,19 @@
+state={
+	id=915
+	name="STATE_915"
+	history={
+		owner = YAS
+		add_core_of = YAS
+		
+		victory_points = {
+			2048 5 
+		}
+
+	}
+	provinces={
+		2048 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,19 @@
+state={
+	id=917
+	name="STATE_917"
+	history={
+		owner = MIK
+		add_core_of = MIK
+		
+		victory_points = {
+			10786 5 
+		}
+
+	}
+	provinces={
+		10786 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

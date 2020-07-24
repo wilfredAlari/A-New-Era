@@ -1,0 +1,19 @@
+state={
+	id=919
+	name="STATE_919"
+	history={
+		owner = DAW
+		add_core_of = DAW
+		
+		victory_points = {
+			12727 5 
+		}
+
+	}
+	provinces={
+		2090 5024 8004 8060 10748 10791 12727 12870 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

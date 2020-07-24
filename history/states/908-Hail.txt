@@ -1,0 +1,21 @@
+state={
+	id=908
+	name="STATE_908"
+
+	history={
+		owner = SHA
+		add_core_of = SHA
+		
+		victory_points = {
+			5058 5 
+		}
+
+	}
+
+	provinces={
+		1955 2057 4974 5058 10850 12749 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

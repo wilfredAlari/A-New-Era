@@ -1,0 +1,19 @@
+state={
+	id=914
+	name="STATE_914"
+	history={
+		owner = HOR
+		add_core_of = HOR
+		
+		victory_points = {
+			4932 5 
+		}
+
+	}
+	provinces={
+		4932 8108 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

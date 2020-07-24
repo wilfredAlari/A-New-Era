@@ -1,0 +1,14 @@
+state={
+	id=899
+	name="STATE_899"
+	history={
+		owner = ANI
+		add_core_of = ANI
+		}
+	provinces={
+		10383 12316 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category = wasteland
+}

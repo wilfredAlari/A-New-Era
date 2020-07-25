@@ -22,7 +22,6 @@ state={
 			
 		}
 		add_core_of = TUR
-		#add_claim_by = ITA #added by focus
 		add_core_of = CRO
 		add_core_of = HUN
 	}

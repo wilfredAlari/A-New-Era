@@ -10,7 +10,7 @@ state={
 	
 	state_category = large_city
 
-	history={
+	history={ 
 		owner = TUR
 		add_core_of = TUR
 		buildings = {
@@ -26,6 +26,6 @@ state={
 	}
 
 	provinces={
-		684 716 3713 3731 6716 6751 9660 9690 11520 6703 11663 9676 701
+		684 716 3713 3731 6716 9660 9690 6703 11663 9676 701
 	}
 }

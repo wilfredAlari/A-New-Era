@@ -29,4 +29,20 @@ spriteTypes = {
 		name = "GFX_idea_sunni"
 		texturefile = "gfx/interface/ideas/sunni.dds"			
 	}
+	SpriteType = {
+		name = "GFX_idea_prussian_traditions"
+		texturefile = "gfx/interface/ideas/prussian_traditions.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_german_traditions"
+		texturefile = "gfx/interface/ideas/german_traditions.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_french_traditions"
+		texturefile = "gfx/interface/ideas/french_traditions.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_austrian_traditions"
+		texturefile = "gfx/interface/ideas/austrian_traditions.dds"			
+	}
 }

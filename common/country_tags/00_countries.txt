@@ -283,3 +283,7 @@ HOR = "countries/Hormuz.txt"
 YAS = "countries/Yas.txt"
 SHA = "countries/Shammar.txt"
 ANI = "countries/Annizah.txt"
+
+###Africa
+
+DJE = "countries/Djerid.txt"

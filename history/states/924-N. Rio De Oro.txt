@@ -1,11 +1,8 @@
-
 state={
-	id=699
-	name="STATE_699"
-
+	id=924
+	name="STATE_924"
 	history={
-		owner = XXX
-		add_core_of = XXX
+		owner = MOR
 		add_core_of = MOR
 		buildings = {
 			infrastructure = 1
@@ -13,9 +10,8 @@ state={
 		}
 
 	}
-
 	provinces={
-		4920 5012 7979 10875 
+		8038 8111 
 	}
 	manpower=52640
 	buildings_max_level_factor=1.000

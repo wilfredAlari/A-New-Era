@@ -5,6 +5,7 @@ state={
 
 	history={
 		owner = XXX
+		add_core_of = XXX
 		buildings = {
 			infrastructure = 2
 
@@ -16,7 +17,7 @@ state={
 	}
 
 	provinces={
-		1927 2019 2042 4884 5061 6785 6798 6987 12369 12728 12782 
+		1927 2019 2042 4884 6798 6987 12728 12782 
 	}
 	manpower=1
 	buildings_max_level_factor=1.000

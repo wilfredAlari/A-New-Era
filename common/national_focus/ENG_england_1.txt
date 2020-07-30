@@ -1299,7 +1299,7 @@ add_core_of = ENG
 		id = ENG_faction_with_scotland
 		icon = GFX_goal_tripartite_pact
 		x = 2
-		y = 5
+		y = 4
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = ENG_ally_scotland }
@@ -1404,7 +1404,7 @@ add_political_power = 75
 		id = ENG_investment_in_scotland
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 2
-		y = 4
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = ENG_faction_with_scotland }

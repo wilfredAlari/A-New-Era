@@ -1,6 +1,6 @@
 state={
 	id=866
-	name="STATE_802"
+	name="STATE_866"
 
 	history={
 		owner = PAP

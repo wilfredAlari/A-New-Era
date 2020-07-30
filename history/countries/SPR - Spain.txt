@@ -1,5 +1,4 @@
-﻿﻿capital = 41
-
+﻿capital = 41
 oob = "SPR_1936"
 set_research_slots = 3
 

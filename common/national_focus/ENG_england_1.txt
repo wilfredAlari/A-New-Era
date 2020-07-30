@@ -1797,6 +1797,13 @@ add_core_of = ENG
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		IRE = {
+add_ideas = protestant
+add_stability = -0.05
+}
+add_political_power = 25
+		}
 	}
 
 	#Focus for Settle the Caribbean

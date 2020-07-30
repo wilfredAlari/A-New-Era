@@ -62,10 +62,10 @@ add_stability = 0.025
 			factor = 1
 		}
 		available = {
-			has_war_with = SCT
+			has_war_with = SCO
 		}
 		completion_reward = {
-			white_peace = SCT
+			white_peace = SCO
 		}
 	}
 
@@ -614,18 +614,18 @@ category = cl_tech
 			factor = 1
 		}
 		available = {
-			SCT = { exists = yes is_subject = no }
+			SCO = { exists = yes is_subject = no }
 		}
 		completion_reward = {
 			if = {
-limit = { SCT = { has_government = fascism } }
-SCT = {
+limit = { SCO = { has_government = fascism } }
+SCO = {
 add_idea = neutrality_influence
 }
 }
 if = {
-limit = { SCT = { has_government = neutrality } }
-SCT = {
+limit = { SCO = { has_government = neutrality } }
+SCO = {
 add_idea = democratic_influence
 }
 }
@@ -903,7 +903,7 @@ add_political_power = 75
 		}
 		completion_reward = {
 			declare_war_on= { 
-target = SCT
+target = SCO
 type = annex_everything 
 }
 		}
@@ -932,10 +932,10 @@ type = annex_everything
 target = FRA
 }
 if = {
-limit = { SCT = { exists = yes } }
+limit = { SCO = { exists = yes } }
 create_wargoal = {
 type = annex_everything
-target = SCT
+target = SCO
 }
 }
 		}
@@ -1281,14 +1281,14 @@ instant_build = yes }
 			factor = 1
 		}
 		available = {
-			any_owned_state = { is_core_of = SCT }
+			any_owned_state = { is_core_of = SCO }
 NOT = {
-has_war_with = SCT
+has_war_with = SCO
 }
 		}
 		completion_reward = {
 			any_owned_state = {
-limit = { is_core_of = SCT }
+limit = { is_core_of = SCO }
 add_core_of = ENG
 }
 		}
@@ -1307,13 +1307,13 @@ add_core_of = ENG
 			factor = 1
 		}
 		available = {
-			SCT = {
+			SCO = {
 has_opinion = { target = ENG value > 50 }
 }
 		}
 		completion_reward = {
 			create_faction = ENG_SCO_PACT
-add_to_faction = SCT
+add_to_faction = SCO
 		}
 	}
 
@@ -1333,10 +1333,10 @@ add_to_faction = SCT
 		}
 		completion_reward = {
 			add_opinion_modifier = { 
-target = SCT
+target = SCO
 modifier = attache_sent 
 }
-SCT = {
+SCO = {
 add_opinion_modifier = { 
 target = ENG
 modifier = attache_sent 
@@ -1361,10 +1361,10 @@ modifier = attache_sent
 		}
 		completion_reward = {
 			add_opinion_modifier= { 
-target = SCT 
+target = SCO
 modifier = hostile_status 
 }
-SCT = {
+SCO = {
 add_opinion_modifier= { 
 target = ENG
 modifier = hostile_status 
@@ -1413,13 +1413,13 @@ add_political_power = 75
 			factor = 1
 		}
 		available = {
-			SCT = { is_in_faction_with = ENG }
+			SCO = { is_in_faction_with = ENG }
 		}
 		completion_reward = {
 			add_political_power = -50 
 add_stability = 0.05 
 add_offsite_building = { type = industrial_complex level = 1 }
-SCT = {
+SCO = {
 add_offsite_building = { type = industrial_complex level = 2 }
 }
 		}
@@ -2994,16 +2994,16 @@ add_ideas = ENG_trade_union_factory_worker_support
 			factor = 1
 		}
 		available = {
-			SCT = { exists = yes }
+			SCO = { exists = yes }
 NOT = {
-has_war_with = SCT
+has_war_with = SCO
 }
 		}
 		completion_reward = {
 			add_war_support = 0.05
-add_opinion_modifier = { target = SCT modifier = minor_sanctions_relations }
-SCT = { 
-add_opinion_modifier = { target = SCT modifier = minor_sanctions_relations }
+add_opinion_modifier = { target = SCO modifier = minor_sanctions_relations }
+SCO = { 
+add_opinion_modifier = { target = SCO modifier = minor_sanctions_relations }
 }
 		}
 	}
@@ -3038,10 +3038,10 @@ add_opinion_modifier = { target = SCT modifier = minor_sanctions_relations }
 			factor = 1
 		}
 		available = {
-			SCT = { is_subject_of = ENG exists = yes }
+			SCO = { is_subject_of = ENG exists = yes }
 		}
 		completion_reward = {
-			SCT = {
+			SCO = {
 add_idea = protestant
 }
 		}
@@ -3060,16 +3060,16 @@ add_idea = protestant
 			factor = 1
 		}
 		available = {
-			SCT = { exists = yes is_subject = no }
+			SCO = { exists = yes is_subject = no }
 OR = {
-AND = { SCT = { has_government = neutrality democratic > 0.3 } }
-AND = { SCT = { has_government = fascism neutrality > 0.3 } }
+AND = { SCO = { has_government = neutrality democratic > 0.3 } }
+AND = { SCO = { has_government = fascism neutrality > 0.3 } }
 }
 		}
 		completion_reward = {
 			if = {
-limit = { SCT = { has_government = fascism } }
-SCT = {
+limit = { SCO = { has_government = fascism } }
+SCO = {
 start_civil_war = {
  ideology = neutrality
 size = 0.4 
@@ -3077,8 +3077,8 @@ size = 0.4
 }
 }
 if = {
-limit = { SCT = { has_government = neutrality } }
-SCT = {
+limit = { SCO = { has_government = neutrality } }
+SCO = {
 start_civil_war = {
  ideology = democratic
 size = 0.4 
@@ -3087,7 +3087,7 @@ size = 0.4
 }
 create_wargoal = {
 type = topple_government
-target = SCT
+target = SCO
 }
 		}
 	}
@@ -3172,13 +3172,13 @@ add_ideas = foreign_expeditions_focus
 			factor = 1
 		}
 		available = {
-			SCT = { exists = yes is_subject = no }
-NOT = { has_war_with = SCT }
+			SCO = { exists = yes is_subject = no }
+NOT = { has_war_with = SCO }
 		}
 		completion_reward = {
 			create_wargoal = {
 type = annex_everything
-target = SCT
+target = SCO
 }
 		}
 	}
@@ -3198,7 +3198,7 @@ target = SCT
 		}
 		completion_reward = {
 			create_wargoal = {
-target = SCT
+target = SCO
 type = puppet_wargoal_focus
 expire = 0 
 }

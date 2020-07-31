@@ -53,7 +53,7 @@ set_technology = {
 	}
 
 	create_country_leader = {
-		name = "Edward VII"
+		name = "Edward VI"
 		picture = "portrait_edward_vii.dds"
 		ideology = despotism
 		traits = { }

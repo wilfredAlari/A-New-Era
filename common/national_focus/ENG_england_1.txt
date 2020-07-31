@@ -508,6 +508,11 @@ add_offsite_building= { type = arms_factory level = 1 }
 		ai_will_do = {
 			factor = 1
 		}
+		complete_tooltip = {
+			custom_trigger_tooltip = {
+				tooltip = get_10_ducats_tt
+			}
+		}
 		completion_reward = {
 			add_to_variable = { money = 10 }
 		}

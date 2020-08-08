@@ -832,7 +832,7 @@ category = land_doctrine
 	#Focus for Germanic Industry
 	focus = {
 		id = HRE_germanic_industry
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_generic_production
 		x = 8
 		y = 0
 		cost = 10
@@ -1132,7 +1132,7 @@ category = land_doctrine
 	#Focus for Improve Equipment III
 	focus = {
 		id = HRE_improve_equipment_iii
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_generic_production
 		x = 4
 		y = 5
 		cost = 10

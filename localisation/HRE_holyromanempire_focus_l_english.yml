@@ -83,83 +83,87 @@ HRE_shiny_guns:0 "Shiny Guns"
 HRE_shiny_guns_desc:0 "Getting new guns to help arm our military would be of great help to their training"
 HRE_german_armies:0 "German Armies"
 HRE_german_armies_desc:0 "German military might is known far and wide. We must make sure we live up to this legend."
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
+HRE_research_doctrine_i:0 "Research Doctrine I"
+HRE_research_doctrine_i_desc:0 "We should put more resources into researching doctrine for our battles"
+HRE_equipment_improvement_i:0 "Equipment Improvement I"
+HRE_equipment_improvement_i_desc:0 "We should look into improving our equipment, for it is far from the best it could be."
+HRE_research_doctrine_ii:0 "Research Doctrine II"
+HRE_research_doctrine_ii_desc:0 "We should split our focus so we can research more diverse doctrine over a similar period of time"
+HRE_create_space_for_industry:0 "Create Space for Industry"
+HRE_create_space_for_industry_desc:0 "We need to create more space so we can fit in more industry."
+HRE_build_up_infrastructure:0 "Build Up Infrastructure"
+HRE_build_up_infrastructure_desc:0 "We need to better connect our lands, so that goods and people can swiftly move from one end of it to the other."
+HRE_internal_politics:0 "Internal Politics"
+HRE_internal_politics_desc:0 "While there are a great many forces around us trying to influence us, we must make sure to stay true to ourselves and decide our politics ourselves"
+HRE_authority_focus:0 "Authority Focus"
+HRE_authority_focus_desc:0 "We must make sure to empower our ruler so that they may do what is necessary."
+HRE_egalitarian_focus:0 "Egalitarian Focus"
+HRE_egalitarian_focus_desc:0 "We should instead focus on what our people want and need, and supply those accordingly."
+HRE_keep_the_status_quo:0 "Keep the Status Quo"
+HRE_keep_the_status_quo_desc:0 "Our current policy and government is good enough, we do not need to drastically change it"
+HRE_empower_the_ruler:0 "Empower the Ruler"
+HRE_empower_the_ruler_desc:0 "We should establish our current leader as the de facto ruler of our lands, giving them ultimate power over our people"
+HRE_empower_the_people:0 "Empower the People"
+HRE_empower_the_people_desc:0 "We should give our people more power over our country, perhaps even letting them choose who is in control"
+HRE_equipment_improvement_ii:0 "Equipment Improvement II"
+HRE_equipment_improvement_ii_desc:0 "We should continue to improve our equipment, so we have the highest of quality for our guns"
+HRE_shiny_cannons:0 "Shiny Cannons"
+HRE_shiny_cannons_desc:0 "We should get some new artillery to use for our armies"
+HRE_research_doctrine_iii:0 "Research Doctrine III"
+HRE_research_doctrine_iii_desc:0 "We must continue our doctrinal research, lest our enemies pounce upon us with superior tactics"
+HRE_improve_equipment_iii:0 "Improve Equipment III"
+HRE_improve_equipment_iii_desc:0 "We need to have the best of equipment, and we do not. Yet."
+HRE_special_forces:0 "Special Forces"
+HRE_special_forces_desc:0 "We must have specialized forces able to take on any task necessary for victory"
+HRE_mine_for_iron:0 "Mine for Iron"
+HRE_mine_for_iron_desc:0 "We should search our lands for more iron, to help feed our industry"
+HRE_save_the_heretics:0 "Save the Heretics"
+HRE_save_the_heretics_desc:0 "We must save the Heretics from their own sin, by blood if necessary."
+HRE_militarism:0 "Militarism"
+HRE_militarism_desc:0 "Those who view the military as a necessary evil are doomed to hesitate in the face of war. We will ingrain militarism into our culture to become a people of soldiers."
+HRE_war_on_protestantism:0 "War on Protestantism"
+HRE_war_on_protestantism_desc:0 "We must cleanse the world of these Protestant scum!"
+HRE_band_together:0 "Band Together"
+HRE_band_together_desc:0 "Fellow Lutherans and Protestants should band together and get along with each other."
+HRE_leave_the_holy_roman_empire:0 "Leave the Holy Roman Empire"
+HRE_leave_the_holy_roman_empire_desc:0 "We cannot stand for the corruption in the Catholic church that is supported by most of the Holy Roman Empire. We should leave it, before it taints us."
+HRE_try_to_convert_inside_the_empire:0 "Try to Convert Inside the Empire"
+HRE_try_to_convert_inside_the_empire_desc:0 "We should stay a part of the Holy Roman Empire, to show that we are not enemies, and we only want to guide them to the true version of Christianity"
+HRE_saved_by_god:0 "Saved by God"
+HRE_saved_by_god_desc:0 "We know our destiny is written by God, we must now only figure out what His plan is"
+HRE_a_protestant_union:0 "A Protestant Union"
+HRE_a_protestant_union_desc:0 "Protestants should officially ally with each other so that we may protect ourselves from bloodthirsty Catholics."
+HRE_war_studies:0 "War Studies"
+HRE_war_studies_desc:0 "We must always be knowledgeable in the art of war, lest we be caught unawares."
+HRE_military_youth:0 "Military Youth"
+HRE_military_youth_desc:0 "Organizations to promote discipline and political education of young people in our nation will foster loyalty and self-sacrifice early."
+HRE_foreign_expeditions:0 "Foreign Expiditions"
+HRE_foreign_expeditions_desc:0 "With our enemies prepared to intervene in distant conflicts on behalf of their ideals, we must be ready to do the same for ours."
+HRE_spread_the_peoples_power:0 "Spread the People's Power"
+HRE_spread_the_peoples_power_desc:0 "We must do our best to show others the glory of letting the people lead."
+HRE_light_cruiser_focus:0 "Light Cruiser Focus"
+HRE_light_cruiser_focus_desc:0 "We need ships able to at least somewhat keep up with our destroyers, but still be able to have more firepower."
+HRE_fill_the_seas:0 "Fill the Seas"
+HRE_fill_the_seas_desc:0 "We should compensate with our smaller and weaker ships with numbers, and fill the seas with swarms of our ships, able to take down any greater and more powerful ship.."
+HRE_destroyer_focus:0 "Destroyer Focus"
+HRE_destroyer_focus_desc:0 "We need to put more focus on the smaller Destroyer, surprisingly effective given its minuscule size compared to other ships."
+HRE_battleship_focus:0 "Battleship Focus"
+HRE_battleship_focus_desc:0 "Battleships are a powerful part of any fleet with good composition, able to support the other ships against more powerful ships, and able to take hits from ships in its own weight class."
+HRE_super_heavy_battleships:0 "Super-Heavy Battleships"
+HRE_super_heavy_battleships_desc:0 "We must prepare the heaviest and most powerful capital ships to be able to crush our enemies."
+HRE_local_navy_supremacy:0 "Local Navy Supremacy"
+HRE_local_navy_supremacy_desc:0 "With our powerful and heavily-armed fleet, we are doubtless the most powerful navy in our region."
+HRE_increase_industrial_spending:0 "Increase Industrial Spending"
+HRE_increase_industrial_spending_desc:0 "We must better our industry, so that we can compete with other nations."
+HRE_loyal_to_the_end:0 "Loyal to the End"
+HRE_loyal_to_the_end_desc:0 "We will never leave the Holy Roman Empire, not even the last man in our land will dare to betray our greater purpose."
+HRE_a_time_of_peace:0 "A Time of Peace"
+HRE_a_time_of_peace_desc:0 "We should not use war, for we are a more civilized people, and we are beyond that."
+HRE_strike_against_the_empire:0 "Strike Against the Empire"
+HRE_strike_against_the_empire_desc:0 "We cannot allow the Holy Roman Empire to threaten us. We should continue to strike against it."
+HRE_strength_of_diversity:0 "Strength of Diversity"
+HRE_strength_of_diversity_desc:0 "Our Diversity is our strength, we should not unify for fear of losing that."
+HRE_dangers_of_complacency:0 "Dangers of Complacency"
+HRE_dangers_of_complacency_desc:0 "While we are secure in our place, we must make sure not to fall into complacency"
+HRE_enhance_infrastructure:0 "Enhance Infrastructure"
+HRE_enhance_infrastructure_desc:0 "We need to make sure that our infrastructure is as high-quality as possible."

@@ -19,70 +19,70 @@ HRE_big_ships:0 "Big Ships"
 HRE_big_ships_desc:0 "Battleships are the powerhouse of any navy, and we should put an effort into giving these powerhouses even more power"
 HRE_vye_for_naval_dominance:0 "Vye for Naval Dominance"
 HRE_vye_for_naval_dominance_desc:0 "We should focus our efforts on trying to become a naval power of the region"
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
-HRE_
+HRE_heavy_navy:0 "Heavy Navy"
+HRE_heavy_navy_desc:0 "We will focus on larger, heavier ships able to dish out and take powerful hits"
+HRE_mixed_navy:0 "Mixed Navy"
+HRE_mixed_navy_desc:0 "We must be sure to have a healthy mix of heavier and lighter ships, lest we be unbalanced and exploitable"
+HRE_skirmish_navy:0 "Skirmish Navy"
+HRE_skirmish_navy_desc:0 "We will starve out and skirmish with our smaller navy, for we do not have the larger ships able to punch through thicker armor or resist heavier shots."
+HRE_medium_ships:0 "Medium Ships"
+HRE_medium_ships_desc:0 "Cruisers are an important part of any navy, and ours will not be lacking in them"
+HRE_focus_on_piracy:0 "Focus on Piracy"
+HRE_focus_on_piracy_desc:0 "We do not have the industry to focus on large fleets of powerful ships. We should instead try hit-and-run tactics, along with looting weaker enemy ships."
+HRE_create_navy:0 "Create A Navy"
+HRE_create_navy_desc:0 "We should create a navy, so that we may project our power into the sea."
+HRE_small_ships:0 "Small Ships"
+HRE_small_ships_desc:0 "Small and nimble ships are able to outmaneuver larger and slower ships, making them important to the naval effort."
+HRE_refine_industry:0 "Refine Industry"
+HRE_refine_industry_desc:0 "We should further refine our industrial techniques and equipment, so we can make the most out of what we have."
+HRE_combined_industry:0 "Combined Industry"
+HRE_combined_industry_desc:0 "We should work to integrate our industries more, so that we can fit more into a smaller space."
+HRE_industry_for_military_ii:0 "Industry for Military II"
+HRE_industry_for_military_ii_desc:0 "Continuously improving our military industry cannot harm our chances in any future wars."
+HRE_industry_for_military_i:0 "Industry for Military I"
+HRE_industry_for_military_i_desc:0 "We must build industry for our army, lest they be unarmed in combat."
+HRE_industry_for_consumers_ii:0 "Industry for Consumers II"
+HRE_industry_for_consumers_ii_desc:0 "We must build industry for our populace, lest they despise us."
+HRE_germanic_industry:0 "Germanic Industry"
+HRE_germanic_industry_desc:0 "We Germans are known to be industrial people. We will show just how industrial we can be."
+HRE_serve_a_greater_purpose_together:0 "Serve a Greater Purpose Together"
+HRE_serve_a_greater_purpose_together_desc:0 "Now that we have grown in size and power, we can better serve the Holy Roman Empire"
+HRE_unify_our_region:0 "Unify Our Region"
+HRE_unify_our_region_desc:0 "We are no good split up and squabbling like this. We should try to subjugate our nearby allies so we can serve a greater purpose together"
+HRE_betray_the_empire:0 "Betray the Empire"
+HRE_betray_the_empire_desc:0 "Now that we have grown in power, we do not need the Holy Roman Empire anymore."
+HRE_promote_nationalism:0 "Promote Nationalism"
+HRE_promote_nationalism_desc:0 "We must be proud of our nation, even if it is a small one in the grand scheme of things."
+HRE_a_split_but_cooperative_whole:0 "A Split But Cooperative Whole"
+HRE_a_split_but_cooperative_whole_desc:0 "While we are not so different from our fellow Holy Roman Empire members, we are better off separate in our own peoples, but still working together"
+HRE_greater_imperial_good:0 "Greater Imperial Good"
+HRE_greater_imperial_good_desc:0 "We must stay subservient to the Holy Roman Empire, so that it may stay strong and not be split into squabbling factions."
+HRE_the_imperial_question:0 "The Imperial Question"
+HRE_the_imperial_question_desc:0 "We must question how we are going to go on in the Holy Roman Empire, and our goals."
+HRE_selfish_desires:0 "Selfish Desires"
+HRE_selfish_desires_desc:0 "While the Holy Roman Empire is important, we will put our own goals slightly above theirs in importance."
+HRE_promote_unity:0 "Promote Unity"
+HRE_promote_unity_desc:0 "We are a part of a greater whole, and must make sure we do not rock the boat with our tendencies."
+HRE_settled_in_our_place:0 "Settled in our Place"
+HRE_settled_in_our_place_desc:0 "We are in this position for a reason. We cannot fail our Emperor, especially in this decisive and divisive time."
+HRE_religious_unrest:0 "Religious Unrest"
+HRE_religious_unrest_desc:0 "We must decide whether we will follow the tide of the Reformation, or stay loyal to the Pope."
+HRE_loyalty_to_the_pope:0 "Loyalty to the Pope"
+HRE_loyalty_to_the_pope_desc:0 "We must stay Catholic and loyal to the Pope, not going along with these rebellious upstarts"
+HRE_reform_the_church:0 "Reform the Church"
+HRE_reform_the_church_desc:0 "The Catholic Church is bloated and corrupt, we must reform the religion to keep this from happening again."
+HRE_luthers_ideals:0 "Luther's Ideals"
+HRE_luthers_ideals_desc:0 "We must live up to Luther's ideal, where we are free to believe in Jesus and his salvation without paying fees to a church."
+HRE_calvins_ideals:0 "Calvin's Ideals"
+HRE_calvins_ideals_desc:0 "We are guided by God's preeminent omniscient wisdom, knowing that our fates are laid out ahead of us."
+HRE_religious_tolerance:0 "Religious Tolerance"
+HRE_religious_tolerance_desc:0 "We should stay peaceful and tolerant of others, for they shall learn the errors of their way, and we cannot show compassion and oppress others at the same time"
+HRE_peaceful_catholicism:0 "Peaceful Catholicism"
+HRE_peaceful_catholicism_desc:0 "The fools who believe in the Reformation will come crawling back once they realize it is fake. There is no need to purge them because of their heresy."
+HRE_shiny_guns:0 "Shiny Guns"
+HRE_shiny_guns_desc:0 "Getting new guns to help arm our military would be of great help to their training"
+HRE_german_armies:0 "German Armies"
+HRE_german_armies_desc:0 "German military might is known far and wide. We must make sure we live up to this legend."
 HRE_
 HRE_
 HRE_

@@ -11,7 +11,6 @@ focus_tree = {
         tag = LUB 
         tag = MEK 
         tag = POM 
-        tag = BRN 
         tag = SAX 
         tag = THU 
         tag = LUN 
@@ -944,6 +943,12 @@ instant_build = yes }
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.2
+		}
+		}
 	}
 
 	#Focus for Egalitarian Focus
@@ -958,6 +963,12 @@ instant_build = yes }
 		mutually_exclusive = { focus = HRE_authority_focus }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.2
+		}
 		}
 	}
 
@@ -982,6 +993,16 @@ instant_build = yes }
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+		}
+		}
 	}
 
 	#Focus for Empower the People
@@ -1001,6 +1022,16 @@ instant_build = yes }
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+		}
 		}
 	}
 
@@ -1043,6 +1074,15 @@ category = artillery
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = fascism
+		}
 		}
 	}
 

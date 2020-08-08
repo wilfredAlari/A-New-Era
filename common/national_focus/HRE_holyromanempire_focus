@@ -1,0 +1,43 @@
+focus_tree = {
+	id = HRE_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+      OR = {
+        tag = DIE 
+        tag = HLS 
+        tag = HAM 
+        tag = LUB 
+        tag = MEK 
+        tag = POM 
+        tag = BRN 
+        tag = SAX 
+        tag = THU 
+        tag = LUN 
+        tag = VER 
+        tag = BRE 
+        tag = OLD 
+        tag = MUN 
+        tag = BRU 
+        tag = CLG 
+        tag = KLE 
+        tag = TER
+        tag = HES 
+        tag = FRK 
+        tag = LOR 
+        tag = ALS 
+        tag = PLT
+        tag = BAD 
+        tag = RAV 
+        tag = WUR 
+        tag = ULM 
+        tag = BAY 
+        tag = ANS 
+        tag = MAI 
+        tag = WRZ 
+       }
+		}
+	}
+  
+  

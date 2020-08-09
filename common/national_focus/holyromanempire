@@ -105,7 +105,7 @@ amount = 7
 			factor = 1
 		}
 		completion_reward = {
-			any_owned_state = {
+			all_owned_state = {
 limit = { NOT = { is_core_of = ROOT } }
 add_core_of = ROOT
 }

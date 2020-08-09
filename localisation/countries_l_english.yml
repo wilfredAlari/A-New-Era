@@ -3,9 +3,9 @@
  GER_DEF:0 "Germany"
  GER_ADJ:0 "German"
  
- ENG:0 "Britain"
- ENG_DEF:0 "Britain"
- ENG_ADJ:0 "British"
+ ENG:0 "England"
+ ENG_DEF:0 "England"
+ ENG_ADJ:0 "English"
  
  SOV:0 "Russia"
  SOV_DEF:0 "Russia"

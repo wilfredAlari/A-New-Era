@@ -1,5 +1,5 @@
 focus_tree = {
-	id = holyromanempire_1
+	id = HRE_focus
 	country = {
 		factor = 0
 		modifier = {

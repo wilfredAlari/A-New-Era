@@ -1,0 +1,1939 @@
+focus_tree = {
+	id = HRE_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+      OR = {
+        tag = DIE 
+        tag = HLS 
+        tag = HAM 
+        tag = LUB 
+	tag = SAL
+	tag = TRI
+	tag = DOR
+        tag = MEK 
+        tag = POM 
+        tag = SAX 
+        tag = THU 
+        tag = LUN 
+        tag = VER 
+        tag = BRE 
+        tag = OLD 
+        tag = MUN 
+        tag = BRU 
+        tag = CLG 
+        tag = KLE 
+        tag = TER
+        tag = HES 
+        tag = FRK 
+	tag = EFR
+        tag = LOR 
+        tag = ALS 
+        tag = PLT
+        tag = BAD 
+        tag = RAV 
+        tag = WUR 
+        tag = ULM 
+	tag = LIE
+	tag = SLA
+        tag = BAY 
+        tag = ANS 
+        tag = MAI 
+        tag = WRZ 
+       }
+		}
+	}
+  	focus = {
+		id = HRE_industry_for_consumers_i
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_streamline_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = industrial_complex
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Chromium Production
+	focus = {
+		id = HRE_chromium_production
+		icon = GFX_focus_fra_devalue_the_franc
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_steel_mills 
+			focus = HRE_mine_for_tungsten 
+			focus = HRE_mine_for_aluminum 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_resource = {
+type = chromium
+amount = 7
+}
+}
+		}
+	}
+
+	#Focus for Turn the Heretics
+	focus = {
+		id = HRE_turn_the_heretics
+		icon = GFX_focus_CZE_german_puppet
+		x = 21
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_war_on_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_owned_state = {
+limit = { NOT = { is_core_of = ROOT } }
+add_core_of = ROOT
+}
+		}
+	}
+
+	#Focus for Big Ships
+	focus = {
+		id = HRE_big_ships
+		icon = GFX_focus_generic_navy_battleship2
+		x = 35
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_vye_for_naval_dominance }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = capital_ships_bonus
+bonus = 1.0
+uses = 2
+category = bc_tech
+category = bb_tech
+}
+		}
+	}
+
+	#Focus for Heavy Navy
+	focus = {
+		id = HRE_heavy_navy
+		icon = GFX_goal_generic_army_tanks
+		x = 35
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_big_ships }
+		mutually_exclusive = { focus = HRE_mixed_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 1
+bonus = 1.0
+category = naval_doctrine
+}
+random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = dockyard 
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Mixed Navy
+	focus = {
+		id = HRE_mixed_navy
+		icon = GFX_focus_generic_destroyer
+		x = 33
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_medium_ships }
+		mutually_exclusive = { 
+			focus = HRE_heavy_navy 
+		}
+		mutually_exclusive = { 
+			focus = HRE_skirmish_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 2
+bonus = 0.75
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Focus on Piracy
+	focus = {
+		id = HRE_focus_on_piracy
+		icon = GFX_goal_generic_small_arms
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_create_navy }
+		mutually_exclusive = { focus = HRE_vye_for_naval_dominance }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = dockyard 
+level = 1
+instant_build = yes }
+}
+add_tech_bonus = {
+name = sub_op_bonus
+bonus = 1.0
+uses = 2
+technology = convoy_interdiction_ti
+technology = unrestricted_submarine_warfare
+technology = wolfpacks
+technology = advanced_submarine_warfare
+technology = combined_operations_raiding
+}
+		}
+	}
+
+	#Focus for Vye for Naval Dominance
+	focus = {
+		id = HRE_vye_for_naval_dominance
+		icon = GFX_goal_generic_navy_battleship
+		x = 34
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_create_navy }
+		mutually_exclusive = { focus = HRE_focus_on_piracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 3
+add_building_construction= { 
+type = dockyard 
+level = 3
+instant_build = yes }
+}
+add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 1
+bonus = 1.0
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Small Ships
+	focus = {
+		id = HRE_small_ships
+		icon = GFX_goal_generic_wolf_pack
+		x = 31
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_focus_on_piracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = dd_bonus
+bonus = 1.5
+ahead_reduction = 2
+uses = 1
+category = dd_tech
+}
+		}
+	}
+
+	#Focus for Refine Industry
+	focus = {
+		id = HRE_refine_industry
+		icon = GFX_goal_generic_production2
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_combined_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.75 
+uses = 2 
+category = industry 
+}
+		}
+	}
+
+	#Focus for Industry for Military II
+	focus = {
+		id = HRE_industry_for_military_ii
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_industry_for_military_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = arms_factory
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Industry for Consumers II
+	focus = {
+		id = HRE_industry_for_consumers_ii
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_industry_for_consumers_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = industrial_complex
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Combined Industry
+	focus = {
+		id = HRE_combined_industry
+		icon = GFX_goal_generic_construction2
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_industry_for_military_ii 
+		}
+		prerequisite = { 
+			focus = HRE_industry_for_consumers_ii 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+add_building_construction= { 
+type = arms_factory
+level = 1
+instant_build = yes }
+add_building_construction= { 
+type = industrial_complex
+level = 1
+instant_build = yes }
+}
+		}
+	}
+focus = {
+		id = HRE_streamline_industry
+		icon = GFX_focus_generic_industry_1
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_germanic_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = GER_autarky_idea
+random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+}
+		}
+	}
+
+	#Focus for Industry for Military I
+	focus = {
+		id = HRE_industry_for_military_i
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_streamline_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = arms_factory
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Serve a Greater Purpose Together
+	focus = {
+		id = HRE_serve_a_greater_purpose_together
+		icon = GFX_goal_tripartite_pact
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_unify_our_region }
+		mutually_exclusive = { focus = HRE_betray_the_empire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = -0.025
+add_stability = 0.025
+add_political_power = 50
+		}
+	}
+
+	#Focus for Betray the Empire
+	focus = {
+		id = HRE_betray_the_empire
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_unify_our_region }
+		mutually_exclusive = { focus = HRE_serve_a_greater_purpose_together }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+add_stability = -0.05
+add_war_support = 0.1
+		}
+	}
+
+	#Focus for Unify Our Region
+	focus = {
+		id = HRE_unify_our_region
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_promote_nationalism }
+		mutually_exclusive = { focus = HRE_a_split_but_cooperative_whole }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+random_neighbor_country = {
+limit = {
+not = {
+is_guaranteed_by = ROOT
+is_subject_of = ROOT
+has_non_aggression_pact_with = ROOT
+}
+}
+}
+ROOT = {
+declare_war_on = {
+target = PREV
+type = annex_everything
+}
+}
+		}
+	}
+
+	#Focus for Greater Imperial Good
+	focus = {
+		id = HRE_greater_imperial_good
+		icon = GFX_goal_generic_national_unity
+		x = 13
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_the_imperial_question }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_political_power = 25
+add_stability = 0.025
+		}
+	}
+
+	#Focus for Promote Nationalism
+	focus = {
+		id = HRE_promote_nationalism
+		icon = GFX_goal_support_fascism
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_selfish_desires }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+add_stability = -0.025
+		}
+	}
+
+	#Focus for Promote Unity
+	focus = {
+		id = HRE_promote_unity
+		icon = GFX_goal_generic_improve_relations
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_greater_imperial_good }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+add_stability = 0.025
+		}
+	}
+
+	#Focus for A Split But Cooperative Whole
+	focus = {
+		id = HRE_a_split_but_cooperative_whole
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_promote_nationalism 
+			focus = HRE_promote_unity 
+		}
+		mutually_exclusive = { 
+			focus = HRE_unify_our_region 
+		}
+		mutually_exclusive = { 
+			focus = HRE_settled_in_our_place 
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.05
+add_political_power = 25
+		}
+	}
+
+	#Focus for Religious Unrest
+	focus = {
+		id = HRE_religious_unrest
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		x = 22
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+add_political_power = 25
+		}
+	}
+
+	#Focus for Loyalty to the Pope
+	focus = {
+		id = HRE_loyalty_to_the_pope
+		icon = GFX_focus_por_concordat
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_religious_unrest }
+		mutually_exclusive = { focus = HRE_reform_the_church }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = catholic
+		}
+	}
+
+	#Focus for Reform the Church
+	focus = {
+		id = HRE_reform_the_church
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 24
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_religious_unrest }
+		mutually_exclusive = { focus = HRE_loyalty_to_the_pope }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = protestant
+		}
+	}
+
+	#Focus for Luther's Ideals
+	focus = {
+		id = HRE_luthers_ideals
+		icon = GFX_goal_generic_trade
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_reform_the_church }
+		mutually_exclusive = { focus = HRE_calvins_ideals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+add_ideas = british_austerity_idea
+		}
+	}
+
+	#Focus for The Imperial Question
+	focus = {
+		id = HRE_the_imperial_question
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 14
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+focus = {
+		id = HRE_create_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 33
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = { is_coastal= yes }
+		}
+		completion_reward = {
+			navy_experience = 15
+random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 3
+add_building_construction= { 
+type = dockyard 
+level = 3
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Selfish Desires
+	focus = {
+		id = HRE_selfish_desires
+		icon = GFX_goal_generic_demand_territory
+		x = 15
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_the_imperial_question }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+add_stability = -0.05
+		}
+	}
+
+	#Focus for Religious Tolerance
+	focus = {
+		id = HRE_religious_tolerance
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_peaceful_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+
+	#Focus for Shiny Guns
+	focus = {
+		id = HRE_shiny_guns
+		icon = GFX_goal_generic_army_artillery2
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_german_armies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = infantry_equipment
+amount = 1000
+producer = ROOT 
+}
+		}
+	}
+
+	#Focus for Research Doctrine I
+	focus = {
+		id = HRE_research_doctrine_i
+		icon = GFX_goal_generic_cavalry
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_german_armies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 1.5 
+uses = 1 
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Equipment Improvement I
+	focus = {
+		id = HRE_equipment_improvement_i
+		icon = GFX_goal_generic_small_arms
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_german_armies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.0
+uses = 1 
+category =  infantry_weapons
+category = artillery
+}
+		}
+	}
+
+	#Focus for German Armies
+	focus = {
+		id = HRE_german_armies
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 20
+add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 1.25 
+uses = 1 
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Research Doctrine II
+	focus = {
+		id = HRE_research_doctrine_ii
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_research_doctrine_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 0.75 
+uses = 2 
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Germanic Industry
+	focus = {
+		id = HRE_germanic_industry
+		icon = GFX_goal_generic_production
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.75 
+uses = 2 
+category = industry 
+}
+		}
+	}
+
+	#Focus for Calvin's Ideals
+	focus = {
+		id = HRE_calvins_ideals
+		icon = GFX_goal_generic_radar
+		x = 25
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_reform_the_church }
+		mutually_exclusive = { focus = HRE_luthers_ideals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = reformed
+add_stability = 0.04
+		}
+	}
+
+	#Focus for Create Space for Industry
+	focus = {
+		id = HRE_create_space_for_industry
+		icon = GFX_goal_generic_construction2
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_combined_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = { add_extra_state_shared_building_slots = 2 
+}
+		}
+	}
+
+	#Focus for Build Up Infrastructure
+	focus = {
+		id = HRE_build_up_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_industry_for_consumers_i 
+		}
+		prerequisite = { 
+			focus = HRE_industry_for_military_i 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = infrastructure
+level = 2
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Internal Politics
+	focus = {
+		id = HRE_internal_politics
+		icon = GFX_goal_generic_demand_territory
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Authority Focus
+	focus = {
+		id = HRE_authority_focus
+		icon = GFX_goal_generic_political_pressure
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_internal_politics }
+		mutually_exclusive = { focus = HRE_egalitarian_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.2
+		}
+		}
+	}
+
+	#Focus for Egalitarian Focus
+	focus = {
+		id = HRE_egalitarian_focus
+		icon = GFX_goal_generic_improve_relations
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_internal_politics }
+		mutually_exclusive = { focus = HRE_authority_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.2
+		}
+		}
+	}
+
+	#Focus for Keep the Status Quo
+	focus = {
+		id = HRE_keep_the_status_quo
+		icon = GFX_goal_generic_neutrality_focus
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_egalitarian_focus 
+			focus = HRE_authority_focus 
+		}
+		mutually_exclusive = { 
+			focus = HRE_empower_the_ruler 
+		}
+		mutually_exclusive = { 
+			focus = HRE_empower_the_people 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+		}
+		}
+	}
+
+	#Focus for Empower the People
+	focus = {
+		id = HRE_empower_the_people
+		icon = GFX_goal_support_democracy
+		x = 24
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_egalitarian_focus }
+		mutually_exclusive = { 
+			focus = HRE_keep_the_status_quo 
+		}
+		mutually_exclusive = { 
+			focus = HRE_empower_the_ruler 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+		}
+		}
+	}
+
+	#Focus for Equipment Improvement II
+	focus = {
+		id = HRE_equipment_improvement_ii
+		icon = GFX_goal_generic_occupy_start_war
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_equipment_improvement_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.25
+uses = 1 
+category =  infantry_weapons
+category = artillery
+}
+		}
+	}
+
+	#Focus for Empower the Ruler
+	focus = {
+		id = HRE_empower_the_ruler
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 20
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_authority_focus }
+		mutually_exclusive = { 
+			focus = HRE_keep_the_status_quo 
+		}
+		mutually_exclusive = { 
+			focus = HRE_empower_the_people 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.33
+		}
+		set_politics = {
+		ruling_party = fascism
+		}
+		}
+	}
+
+	#Focus for Shiny Cannons
+	focus = {
+		id = HRE_shiny_cannons
+		icon = GFX_goal_generic_army_artillery2
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_shiny_guns }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = artillery_equipment_1
+amount = 1000
+producer = ROOT 
+}
+		}
+	}
+
+	#Focus for Research Doctrine III
+	focus = {
+		id = HRE_research_doctrine_iii
+		icon = GFX_goal_demand_sudetenland
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_research_doctrine_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 1.0 
+uses = 1
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Improve Equipment III
+	focus = {
+		id = HRE_improve_equipment_iii
+		icon = GFX_goal_generic_production
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_equipment_improvement_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 0.8
+uses = 2
+category =  infantry_weapons
+category = artillery
+}
+		}
+	}
+
+	#Focus for Special Forces
+	focus = {
+		id = HRE_special_forces
+		icon = GFX_goal_generic_special_forces
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_improve_equipment_iii 
+		}
+		prerequisite = { 
+			focus = HRE_research_doctrine_iii 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = special_forces
+add_tech_bonus = {
+name = special_forces_bonus
+bonus = 1.25
+uses = 2
+technology = paratroopers
+technology = paratroopers2
+technology = marines
+technology = marines2
+technology = tech_mountaineers
+technology = tech_mountaineers2
+}
+		}
+	}
+
+	#Focus for Peaceful Catholicism
+	focus = {
+		id = HRE_peaceful_catholicism
+		icon = GFX_focus_rom_handle_king
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_loyalty_to_the_pope }
+		mutually_exclusive = { focus = HRE_save_the_heretics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Mine for Iron
+	focus = {
+		id = HRE_mine_for_iron
+		icon = GFX_goal_generic_construct_civilian
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_resource = {
+type = steel
+amount = 3
+}
+}
+		}
+	}
+
+	#Focus for Steel Mills
+	focus = {
+		id = HRE_steel_mills
+		icon = GFX_focus_generic_steel
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_mine_for_iron }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_resource = {
+type = steel
+amount = 8
+}
+}
+		}
+	}
+
+	#Focus for Mine for Tungsten
+	focus = {
+		id = HRE_mine_for_tungsten
+		icon = GFX_focus_generic_tungsten
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_mine_for_iron }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_resource = {
+type = tungsten
+amount = 6
+}
+}
+		}
+	}
+
+	#Focus for Mine for Aluminum
+	focus = {
+		id = HRE_mine_for_aluminum
+		icon = GFX_focus_generic_aluminum
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_mine_for_iron }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_resource = {
+type = aluminium
+amount = 6
+}
+}
+		}
+	}
+
+	#Focus for Save the Heretics
+	focus = {
+		id = HRE_save_the_heretics
+		icon = GFX_focus_spa_fuse_the_parties
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_loyalty_to_the_pope }
+		mutually_exclusive = { focus = HRE_peaceful_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.075
+add_political_power = 50
+		}
+	}
+
+	#Focus for Militarism
+	focus = {
+		id = HRE_militarism
+		icon = GFX_goal_generic_political_pressure
+		x = 20
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_empower_the_ruler }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = militarism_focus
+army_experience = 20
+set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	#Focus for War on Protestantism
+	focus = {
+		id = HRE_war_on_protestantism
+		icon = GFX_focus_spa_eliminate_the_carlists
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_save_the_heretics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.025
+random_neighbor_country = {
+limit = {
+OR = {
+has_idea = protestant
+has_idea = reformed
+}
+not = {
+is_guaranteed_by = ROOT
+is_subject_of = ROOT
+has_non_aggression_pact_with = ROOT
+}
+}
+}
+ROOT = {
+declare_war_on = {
+target = PREV
+type = annex_everything
+}
+}
+		}
+	}
+
+	#Focus for Band Together
+	focus = {
+		id = HRE_band_together
+		icon = GFX_goal_generic_improve_relations
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_luthers_ideals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_country = {
+limit = { is_on_continent = europe has_idea = protestant }
+add_opinion_modifier = {
+target = ROOT
+modifier = attache_sent
+}
+}
+		}
+	}
+
+	#Focus for Leave the Holy Roman Empire
+	focus = {
+		id = HRE_leave_the_holy_roman_empire
+		icon = GFX_goal_generic_forceful_treaty
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_saved_by_god }
+		mutually_exclusive = { 
+			focus = HRE_try_to_convert_inside_the_empire 
+		}
+		mutually_exclusive = { 
+			focus = HRE_a_protestant_union 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+add_stability = 0.025
+		}
+	}
+
+	#Focus for A Protestant Union
+	focus = {
+		id = HRE_a_protestant_union
+		icon = GFX_goal_generic_defence
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_saved_by_god 
+			focus = HRE_band_together 
+		}
+		mutually_exclusive = { 
+			focus = HRE_leave_the_holy_roman_empire 
+		}
+		mutually_exclusive = { 
+			focus = HRE_try_to_convert_inside_the_empire 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_country = {
+limit = { is_on_continent = europe has_idea = protestant }
+give_guarantee = ROOT
+}
+		}
+	}
+focus = {
+		id = HRE_saved_by_god
+		icon = GFX_goal_generic_demand_territory
+		x = 25
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_calvins_ideals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_war_support = 0.05
+add_political_power = 75
+		}
+	}
+
+	#Focus for Skirmish Navy
+	focus = {
+		id = HRE_skirmish_navy
+		icon = GFX_focus_YUG_rogozarski
+		x = 31
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_small_ships }
+		mutually_exclusive = { focus = HRE_mixed_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = sub_op_bonus
+bonus = 2.0
+uses = 1
+technology = convoy_interdiction_ti
+technology = unrestricted_submarine_warfare
+technology = wolfpacks
+technology = advanced_submarine_warfare
+technology = combined_operations_raiding
+}
+		}
+	}
+
+	#Focus for Try to Convert Inside the Empire
+	focus = {
+		id = HRE_try_to_convert_inside_the_empire
+		icon = GFX_goal_tripartite_pact
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_saved_by_god }
+		mutually_exclusive = { 
+			focus = HRE_leave_the_holy_roman_empire 
+		}
+		mutually_exclusive = { 
+			focus = HRE_a_protestant_union 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_neighbor_country = {
+limit = { NOT = { has_idea = reformed has_war = yes } }
+add_idea = reformed
+}
+add_political_power = 50
+		}
+	}
+
+	#Focus for War Studies
+	focus = {
+		id = HRE_war_studies
+		icon = GFX_goal_generic_army_doctrines
+		x = 20
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_militarism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 1.0 
+uses = 1 
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Military Youth
+	focus = {
+		id = HRE_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 22
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_keep_the_status_quo }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = military_youth_focus
+add_war_support = 0.05
+add_political_power = 50
+		}
+	}
+
+	#Focus for Foreign Expeditions
+	focus = {
+		id = HRE_foreign_expeditions
+		icon = GFX_goal_generic_special_forces
+		x = 24
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_empower_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+set_rule = { can_send_volunteers = yes }
+add_political_power = 100
+		}
+	}
+
+	#Focus for Spread the People's Power
+	focus = {
+		id = HRE_spread_the_peoples_power
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 24
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_foreign_expeditions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	#Focus for Medium Ships
+	focus = {
+		id = HRE_medium_ships
+		icon = GFX_goal_generic_navy_cruiser
+		x = 33
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_focus_on_piracy 
+			focus = HRE_vye_for_naval_dominance 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = cr_bonus
+bonus = 1.0
+uses = 2
+category = ca_tech
+category = cl_tech
+}
+		}
+	}
+
+	#Focus for Light Cruiser Focus
+	focus = {
+		id = HRE_light_cruiser_focus
+		icon = GFX_goal_generic_navy_cruiser
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_skirmish_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = cr_bonus
+bonus = 1.0
+uses = 1
+category = cl_tech
+}
+		}
+	}
+
+	#Focus for Fill the Seas
+	focus = {
+		id = HRE_fill_the_seas
+		icon = GFX_goal_continuous_def_against_influence
+		x = 30
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_light_cruiser_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 2
+add_building_construction= { 
+type = dockyard 
+level = 2
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Destroyer Focus
+	focus = {
+		id = HRE_destroyer_focus
+		icon = GFX_goal_generic_wolf_pack
+		x = 32
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_mixed_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = dd_bonus
+bonus = 1.5
+ahead_reduction = 2
+uses = 1
+category = dd_tech
+}
+		}
+	}
+
+	#Focus for Battleship Focus
+	focus = {
+		id = HRE_battleship_focus
+		icon = GFX_focus_generic_navy_battleship2
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_mixed_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = capital_ships_bonus
+bonus = 1.25
+uses = 1
+category = bc_tech
+category = bb_tech
+}
+		}
+	}
+
+	#Focus for Super Heavy Battleships
+	focus = {
+		id = HRE_super_heavy_battleships
+		icon = GFX_goal_generic_navy_battleship
+		x = 36
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_heavy_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = capital_ships_bonus
+bonus = 1.0
+ahead_reduction = 2
+category = shbb_tech
+}
+		}
+	}
+
+	#Focus for Local Navy Supremacy
+	focus = {
+		id = HRE_local_navy_supremacy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 36
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_super_heavy_battleships }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+random_owned_controlled_state = {
+limit = { is_coastal = yes }
+add_extra_state_shared_building_slots = 2
+add_building_construction= { 
+type = dockyard 
+level = 2
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Increase Industrial Spending
+	focus = {
+		id = HRE_increase_industrial_spending
+		icon = GFX_goal_generic_construction2
+		x = 22
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_military_youth }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.25 
+uses = 1
+category = industry 
+}
+random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+}
+		}
+	}
+
+	#Focus for Loyal to the End
+	focus = {
+		id = HRE_loyal_to_the_end
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_settled_in_our_place 
+			focus = HRE_a_split_but_cooperative_whole 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = deterrence
+add_political_power = 50
+		}
+	}
+
+	#Focus for Settled in Our Place
+	focus = {
+		id = HRE_settled_in_our_place
+		icon = GFX_focus_generic_military_academy
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_promote_unity }
+		mutually_exclusive = { focus = HRE_a_split_but_cooperative_whole }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.075
+		}
+	}
+
+	#Focus for A Time Of Peace
+	focus = {
+		id = HRE_a_time_of_peace
+		icon = GFX_focus_generic_treaty
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_religious_tolerance }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.1
+add_war_support = -0.1
+		}
+	}
+
+	#Focus for Strike Against the Empire
+	focus = {
+		id = HRE_strike_against_the_empire
+		icon = GFX_goal_generic_political_pressure
+		x = 17
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_betray_the_empire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+random_neighbor_country = {
+limit = {
+not = {
+is_guaranteed_by = ROOT
+is_subject_of = ROOT
+has_non_aggression_pact_with = ROOT
+}
+}
+}
+ROOT = {
+declare_war_on = {
+target = PREV
+type = annex_everything
+}
+}
+		}
+	}
+
+	#Focus for Strength of Diversity
+	focus = {
+		id = HRE_strength_of_diversity
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_a_split_but_cooperative_whole }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.025
+add_stability = 0.025
+add_ideas = volunteer_corps_focus
+set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	#Focus for Dangers of Complacency
+	focus = {
+		id = HRE_dangers_of_complacency
+		icon = GFX_goal_generic_fortify_city
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HRE_settled_in_our_place }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.04
+add_political_power = 75
+		}
+	}
+
+	#Focus for Enhance Infrastructure
+	focus = {
+		id = HRE_enhance_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HRE_create_space_for_industry 
+			focus = HRE_refine_industry 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction= { 
+type = infrastructure
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+#End of focuses 
+ }

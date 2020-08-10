@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = XXX
+		owner = IRO
 		buildings = {
 			infrastructure = 3
 

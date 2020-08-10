@@ -16,8 +16,6 @@ set_technology = {
 
 set_convoys = 10
 
-set_cosmetic_tag = LIT_POL
-
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1550.1.1"

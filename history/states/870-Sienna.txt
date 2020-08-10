@@ -1,6 +1,6 @@
 state={
 	id=870
-	name="STATE_870"
+	name="STATE_806"
 
 	history={
 		owner = SNA

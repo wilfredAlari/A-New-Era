@@ -5,6 +5,8 @@ set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.1
 
+set_cosmetic_tag = ENG_england
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -51,7 +53,7 @@ set_technology = {
 	}
 
 	create_country_leader = {
-		name = "Edward VI"
+		name = "Edward VII"
 		picture = "portrait_edward_vii.dds"
 		ideology = despotism
 		traits = { }

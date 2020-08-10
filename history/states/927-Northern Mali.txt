@@ -1,23 +1,20 @@
-
 state={
-	id=781
-	name="STATE_781" # Niger
-	manpower = 143817
-	
-	state_category = pastoral
-
+	id=927
+	name="STATE_927"
 	history={
 		owner = SOG
 		add_core_of = SOG
 		victory_points = {
-			2056 5
+			4927 10
 		}
 		buildings = {
 			infrastructure = 3
 		}
 	}
-
 	provinces={
-		1975 2056 12707
+		10812 10915 
 	}
+	manpower=24782
+	buildings_max_level_factor=1.000
+	state_category = pastoral
 }

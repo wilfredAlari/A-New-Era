@@ -1,0 +1,19 @@
+state={
+	id=926
+	name="STATE_926"
+	history={
+		owner = SOG
+		add_core_of = SOG
+		
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+	provinces={
+		1897 10725 10771 
+	}
+	manpower=79243
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

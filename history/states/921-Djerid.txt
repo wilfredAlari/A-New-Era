@@ -8,12 +8,15 @@ state={
 		victory_points = {
 			12727 5 
 		}
-
+        buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
 	}
 	provinces={
 		8061 8077 1043 1901 5035 2049 4903
 	}
-	manpower=25000
+	manpower=95000
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=pastoral
 }

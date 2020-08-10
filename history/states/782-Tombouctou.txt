@@ -2,14 +2,14 @@
 state={
 	id=782
 	name="STATE_782" # Tombouctou
-	manpower = 79243
+	manpower = 9243
 	
 	state_category = wasteland
 	impassable = yes
 
 	history={
-		owner = XXX
-		add_core_of = XXX
+		owner = SOG
+		add_core_of = SOG
 		buildings = {
 			infrastructure = 0
 		}
@@ -17,6 +17,6 @@ state={
 	}
 
 	provinces={
-		1115 2068 10725 10868
+		1115 2068 10868 
 	}
 }

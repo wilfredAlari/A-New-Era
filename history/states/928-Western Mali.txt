@@ -1,0 +1,25 @@
+state={
+	id=928
+	name="STATE_928"
+	resources={
+		steel = 10
+	}
+
+	history={
+		owner = FLO
+		add_core_of = FLO
+	
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		2012 2100 8015 10829 12802 
+	}
+	manpower=186184
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

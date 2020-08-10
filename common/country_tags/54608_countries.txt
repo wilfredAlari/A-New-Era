@@ -1,1 +1,4 @@
 SAL = "countries/Salzburg.txt"
+SOG = "countries/Songhai.txt"
+MLA = "countries/Mali.txt"
+FLO = "countries/Fulo.txt"

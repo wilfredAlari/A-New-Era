@@ -1,43 +1,6 @@
 ideas = {
+	
 
-	country = {
-		DEN_royal_decree = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-						
-			modifier = {
-				non_core_manpower = 0.1
-				stability_factor = 0.2
-				war_support_factor = 0.2
-			}
-		}
-		
-		DEN_weak_parlement = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-						
-			modifier = {
-				political_power_cost = -0.2
-				stability_factor = -0.2
-			}
-		}
-		
 	political_advisor = {
 
 		DEN_viggo_kampman = {

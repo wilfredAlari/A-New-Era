@@ -722,6 +722,28 @@ LIT = {
 	color = rgb { 157 0 165 }
 	color_ui = rgb { 157 0 165 }
 }
+###West Asia
+
+KHI = {
+	color = rgb { 255 200 117 }
+	color_ui = rgb { 255 200 117 }
+}
+KAZ = {
+	color = rgb { 194 176 141 }
+	color_ui = rgb { 194 176 141 }
+}
+SIB = {
+	color = rgb { 145 114 109 }
+	color_ui = rgb { 145 114 109 }
+}
+BUK = {
+	color = rgb { 199 150 103 }
+	color_ui = rgb { 199 150 103 }
+}
+MUG = {
+	color = rgb { 0 150 70 }
+	color_ui = rgb { 0 150 70 }
+}
 RUS = {
 	color = rgb { 72 143 68 }
 	color_ui = rgb { 72 143 68 }
@@ -955,10 +977,7 @@ INC = {
 }
 
 ###Arabia
-HAD = {
-	color = rgb { 120 137 79 }
-	color_ui = rgb { 120 137 79 }
-}
+
 MAH = {
 	color = rgb { 125 192 193 }
 	color_ui = rgb { 125 192 193 }
@@ -995,24 +1014,3 @@ ANI = {
 	color = rgb { 128 158 186 }
 	color_ui = rgb { 128 158 186 }
 }
-###West Asia
-
-KHI = {
-	color = rgb { 255 200 117 }
-	color_ui = rgb { 255 200 117 }
-}
-KAZ = {
-	color = rgb { 194 176 141 }
-	color_ui = rgb { 194 176 141 }
-}
-SIB = {
-	color = rgb { 145 114 109 }
-	color_ui = rgb { 145 114 109 }
-}
-BUK = {
-	color = rgb { 199 150 103 }
-	color_ui = rgb { 199 150 103 }
-}
-MUG = {
-	color = rgb { 0 150 70 }
-	color_ui = rgb { 0 150 70 }

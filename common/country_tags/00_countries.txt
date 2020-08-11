@@ -272,11 +272,13 @@ BPC	= "countries/Colonial Brazil.txt"
 IRO	= "countries/Irokez.txt"
 CRE	= "countries/Cri.txt"
 
-RUS = "countries/Russia.txt"
-
 ###West Asia
 KAZ = "countries/Kazakh.txt" 
 KHI = "countries/Khiva.txt"
 SIB = "countries/Sibir.txt"
 BUK = "countries/Bukhara.txt"
 MUG = "countries/Mughals.txt"
+
+RUS = "countries/Russia.txt"
+
+

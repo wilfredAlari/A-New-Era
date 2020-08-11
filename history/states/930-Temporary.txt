@@ -1,0 +1,22 @@
+state={
+	id=930
+	name="STATE_930"
+	history={
+		owner = XXX
+		add_core_of = XXX
+		
+		buildings = {
+			infrastructure = 2
+
+		}
+	}
+	
+	provinces={
+		1927 2019 2042 4884 6798 6987 12728 12782
+	}
+	
+	manpower=106184
+	buildings_max_level_factor=1.000
+	state_category = rural
+	
+	}

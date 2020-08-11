@@ -271,3 +271,5 @@ SPP	= "countries/Spanish Peru.txt"
 BPC	= "countries/Colonial Brazil.txt"
 IRO	= "countries/Irokez.txt"
 CRE	= "countries/Cri.txt"
+
+RUS = "countries/Russia.txt"

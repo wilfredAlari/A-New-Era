@@ -4,11 +4,15 @@ state={
 	history={
 		owner = BRN
 		add_core_of = BRN
+		victory_points = {
+			6521 1
+		}
 	}
+	state_category = city
 	provinces={
 		6521 
 	}
 	manpower=25000
 	buildings_max_level_factor=1.000
-	state_category=town
+
 }

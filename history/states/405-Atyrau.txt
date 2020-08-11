@@ -3,8 +3,8 @@ state={
 	name="STATE_405"
 
 	history={
-		owner = UZB
-		add_core_of = UZB
+		owner = BUK
+		add_core_of = BUK
 		victory_points = {
 			1459 3 
 		}
@@ -25,7 +25,7 @@ state={
 	}
 
 	provinces={
-		1459 1573 4629 7639 7682 7775 10205 10488 10671 11687 12239 12722 
+		12248 1216 1919 4686 10601 7777 1459 1573 7639 7682 10205 10488 10671 11687 12239 12722 1632 756 12161 1623 
 	}
 	manpower=6275820
 	buildings_max_level_factor=1.000

@@ -31,27 +31,12 @@
 		}
 		        
 		ai_check = {
-			OR = {
-				date > 01.01.1552
-				has_war = yes
-			}
+			always = no
 		}
-		ai_test_interval = 2400
+		
         ai_test_variance = 1
 		ai_check_scope = {
-			any_neighbor_state = {
-				is_owned_by = ROOT
-			}
-			IF = {
-				limit = {
-					ROOT = {
-						has_war = yes
-					}
-				}
-				OWNER = {
-					has_war_with = ROOT
-				}
-			}
+			
 		 }
 		ai_weights = {
 			claim_state_click = {

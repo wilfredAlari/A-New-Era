@@ -7,33 +7,3371 @@ focus_tree = {
 			tag = ENG
 		}
 	}
-	#Focus for Empower the Protestant Church
+	#Focus for Secure Financial Stability
 	focus = {
-		id = ENG_empower_the_protestant_church
-		icon = GFX_focus_generic_support_the_left_right
-		x = 1
-		y = 1
+		id = ENG_secure_financial_stability
+		icon = GFX_goal_generic_trade
+		x = 15
+		y = 2
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_increased_inflation }
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			custom_trigger_tooltip = {
+tooltip = get_10_ducats_tt
+}
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_to_variable = { money = 10}
+		}
+	}
+
+	#Focus for Regent John Dudley
+	focus = {
+		id = ENG_regent_john_dudley
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 0
+		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = ENG_reign_of_edward_edward_vi }
+		prerequisite = { focus = ENG_empower_the_protestant_church }
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			add_stability= 0.10
+			add_political_power = 50
+add_stability = 0.025
 		}
 	}
 
-	#Focus for Reign of Edward Edward VI
+	#Focus for End The War
 	focus = {
-		id = ENG_reign_of_edward_edward_vi
-		icon = GFX_focus_rom_royal_dictatorship
+		id = ENG_end_the_war
+		icon = GFX_goal_generic_major_alliance
 		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_war_of_the_rough_wooing }
+		mutually_exclusive = { focus = ENG_continue_the_war }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war_with = SCO
+		}
+		completion_reward = {
+			white_peace = SCO
+		}
+	}
+
+	#Focus for Improve Command Structure
+	focus = {
+		id = ENG_improve_command_structure
+		icon = GFX_goal_generic_position_armies
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_war_of_the_rough_wooing }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			command_power < 80
+		}
+		completion_reward = {
+			add_command_power = 40
+		}
+	}
+
+	#Focus for Aggressive Action
+	focus = {
+		id = ENG_aggressive_action
+		icon = GFX_goal_generic_political_pressure
+		x = 35
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_henry_viiis_legacy }
+		mutually_exclusive = { focus = ENG_peacefully_separate }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { has_idea = catholic }
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Turn Back to The Pope
+	focus = {
+		id = ENG_turn_back_to_the_pope
+		icon = GFX_focus_por_concordat
+		x = 44
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_religious_focus }
+		mutually_exclusive = { 
+			focus = ENG_continue_protestantism 
+		}
+		mutually_exclusive = { 
+			focus = ENG_careful_middle_ground 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = catholic
+add_popularity = {
+ideology = fascism
+popularity = 0.1
+}
+		}
+	}
+
+	#Focus for Civilian Production I
+	focus = {
+		id = ENG_civilian_production_i
+		icon = GFX_goal_generic_consumer_goods
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_england }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+add_building_construction = { 
+type = industrial_complex
+level = 2
+instant_build = yes }
+}
+random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = industrial_complex
+level = 1 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Weapon Production I
+	focus = {
+		id = ENG_weapon_production_i
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_england }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+add_building_construction = { 
+type = arms_factory
+level = 2 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Empower the Protestant Church
+	focus = {
+		id = ENG_empower_the_protestant_church
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_reign_of_king_edward_vi }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_idea = protestant
+		}
+		completion_reward = {
+			add_stability = 0.08
+		}
+	}
+
+	#Focus for Reign of King Edward VI
+	focus = {
+		id = ENG_reign_of_king_edward_vi
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 5
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Build Up African Colonies
+	focus = {
+		id = ENG_build_up_african_colonies
+		icon = GFX_focus_generic_africa_production
+		x = 21
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_conqeur_southern_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Our Military
+	focus = {
+		id = ENG_our_military
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 28
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 0.5 
+uses = 1 
+category = land_doctrine 
+}
+add_tech_bonus= {
+bonus = 0.5
+uses = 1 
+category =  infantry_weapons
+}
+		}
+	}
+
+	#Focus for Rise In Militaristic Pride
+	focus = {
+		id = ENG_rise_in_militaristic_pride
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_war_department }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = militarism_focus
+add_war_support = 0.075
+		}
+	}
+
+	#Focus for Propaganda
+	focus = {
+		id = ENG_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 54
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_promote_nationalistic_writing }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = indoctrination_focus
+add_political_power = 75
+		}
+	}
+
+	#Focus for Aim for Naval Dominance
+	focus = {
+		id = ENG_aim_for_naval_dominance
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 30
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_modern_cruisers 
+		}
+		prerequisite = { 
+			focus = ENG_modern_destroyers 
+		}
+		prerequisite = { 
+			focus = ENG_modern_battleships 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 15
+add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 1
+bonus = 1.0
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Strengthen Royal Power III
+	focus = {
+		id = ENG_strengthen_royal_power_iii
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 49
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_strengthen_royal_power_ii 
+			focus = ENG_strengthen_parliament_ii 
+		}
+		mutually_exclusive = { focus = ENG_strengthen_parliament_iii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.025
+add_popularity = {
+ideology = neutrality
+popularity = 0.05
+}
+add_popularity = {
+ideology = fascism
+popularity = 0.05
+}
+add_political_power = 50
+		}
+	}
+
+	#Focus for Strengthen Royal Power II
+	focus = {
+		id = ENG_strengthen_royal_power_ii
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 49
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_strengthen_parliament_i 
+			focus = ENG_strengthen_royal_power_i 
+		}
+		mutually_exclusive = { focus = ENG_strengthen_parliament_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.025
+add_popularity = {
+ideology = neutrality
+popularity = 0.05
+}
+add_popularity = {
+ideology = fascism
+popularity = 0.05
+}
+add_political_power = 50
+		}
+	}
+
+	#Focus for Strengthen Parliament III
+	focus = {
+		id = ENG_strengthen_parliament_iii
+		icon = GFX_focus_generic_self_management
+		x = 47
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_strengthen_parliament_ii }
+		mutually_exclusive = { focus = ENG_strengthen_royal_power_iii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_popularity = {
+ideology = democratic
+popularity = 0.1
+}
+add_political_power = -50
+		}
+	}
+
+	#Focus for Advanced Navy Doctrine
+	focus = {
+		id = ENG_advanced_navy_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_navy_doctrine_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 20
+add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 2
+bonus = 1.25
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Invest into Russia
+	focus = {
+		id = ENG_invest_into_russia
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ponder_foreign_investments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = RUS modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+RUS = {
+add_opinion_modifier = { target = ENG modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+}
+		}
+	}
+
+	#Focus for Ponder Foreign Investments
+	focus = {
+		id = ENG_ponder_foreign_investments
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_secure_financial_stability }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { money = 10 }
+		}
+	}
+
+	#Focus for Increase Agricultural Output
+	focus = {
+		id = ENG_increase_agricultural_output
+		icon = GFX_goal_generic_construction2
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_clear_land_ii 
+		}
+		prerequisite = { 
+			focus = ENG_secure_financial_stability 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+add_stability = 0.02
+		}
+	}
+
+	#Focus for Take Cape Africa
+	focus = {
+		id = ENG_take_cape_africa
+		icon = GFX_goal_generic_territory_or_war
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 275
+transfer_state = 681
+add_political_power = 25
+		}
+	}
+
+	#Focus for Turn to Africa
+	focus = {
+		id = ENG_turn_to_africa
+		icon = GFX_goal_tfv_saf_secure_interests_in_africa
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_inspired_to_colonize }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Modern Cruisers
+	focus = {
+		id = ENG_modern_cruisers
+		icon = GFX_goal_generic_navy_cruiser
+		x = 30
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_lighter_ships 
+		}
+		prerequisite = { 
+			focus = ENG_ships_of_the_line 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = cr_bonus
+bonus = 1.0
+ahead_reduction = 2
+uses = 2
+category = ca_tech
+category = cl_tech
+}
+		}
+	}
+
+	#Focus for Inspire Unrest in Scotland
+	focus = {
+		id = ENG_inspire_unrest_in_scotland
+		icon = GFX_goal_generic_dangerous_deal
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_force_ireland_to_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { exists = yes is_subject = no }
+		}
+		completion_reward = {
+			if = {
+limit = { SCO = { has_government = fascism } }
+SCO = {
+add_idea = neutrality_influence
+}
+}
+if = {
+limit = { SCO = { has_government = neutrality } }
+SCO = {
+add_idea = democratic_influence
+}
+}
+		}
+	}
+
+	#Focus for Invest in Research
+	focus = {
+		id = ENG_invest_in_research
+		icon = GFX_goal_generic_scientific_exchange
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_civilian_production_ii 
+		}
+		prerequisite = { 
+			focus = ENG_all_roads_lead_to_england 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Our Infantry
+	focus = {
+		id = ENG_our_infantry
+		icon = GFX_goal_generic_small_arms
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_our_military }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 0.75 
+uses = 1 
+category = land_doctrine 
+}
+add_tech_bonus= {
+bonus = 0.75
+uses = 1 
+category =  infantry_weapons
+}
+		}
+	}
+
+	#Focus for Improve England
+	focus = {
+		id = ENG_improve_england
+		icon = GFX_goal_generic_production ##Unfortunately, the tool could not find your icon in the game's files
+		x = 16
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+add_tech_bonus = {
+name = industrial_bonus
+bonus = 0.8
+uses = 1
+category = industry
+}
+		}
+	}
+
+	#Focus for Mine for Resources
+	focus = {
+		id = ENG_mine_for_resources
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_civilian_production_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource= { 
+type = tungsten
+amount = 10 
+state = 129
+}
+add_resource= { 
+type = aluminium
+amount = 6 
+state = 122
+}
+		}
+	}
+
+	#Focus for A Weapon in Every Hand
+	focus = {
+		id = ENG_a_weapon_in_every_hand
+		icon = GFX_goal_generic_small_arms
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_weapon_production_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = arms_factory
+level = 1 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Religious Focus
+	focus = {
+		id = ENG_religious_focus
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 39
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Continue Protestantism
+	focus = {
+		id = ENG_continue_protestantism
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 36
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_religious_focus }
+		mutually_exclusive = { 
+			focus = ENG_turn_back_to_the_pope 
+		}
+		mutually_exclusive = { 
+			focus = ENG_careful_middle_ground 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_stability = 0.03
+add_war_support = 0.03
+		}
+	}
+
+	#Focus for Henry VIII's Legacy
+	focus = {
+		id = ENG_henry_viiis_legacy
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_continue_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Dethrone the Tudors!
+	focus = {
+		id = ENG_dethrone_the_tudors
+		icon = GFX_focus_rom_abdicate
+		x = 44
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_back_to_the_pope }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = fascism
+popularity = 0.2
+}
+set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+	}
+
+	#Focus for A New, Protestant Crusade
+	focus = {
+		id = ENG_a_new_protestant_crusade
+		icon = GFX_focus_spa_eliminate_the_carlists
+		x = 36
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_force_ireland_to_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			declare_war_on= { 
+target = PAP 
+type = annex_everything 
+}
+add_war_support = 0.075
+		}
+	}
+
+	#Focus for Peacefully Separate
+	focus = {
+		id = ENG_peacefully_separate
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_henry_viiis_legacy }
+		mutually_exclusive = { focus = ENG_aggressive_action }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { has_idea = catholic }
+		}
+		completion_reward = {
+			PAP = {
+add_opinion_modifier = {
+target = ENG
+modifier = attache_sent
+}
+}
+add_opinion_modifier = {
+target = PAP
+modifier = attache_sent
+}
+add_political_power = 75
+		}
+	}
+
+	#Focus for The War of The Rough Wooing
+	focus = {
+		id = ENG_the_war_of_the_rough_wooing
+		icon = GFX_goal_generic_territory_or_war
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_reign_of_king_edward_vi }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_war= no
+		}
+		completion_reward = {
+			declare_war_on= { 
+target = SCO
+type = annex_everything 
+}
+		}
+	}
+
+	#Focus for Continue the War
+	focus = {
+		id = ENG_continue_the_war
+		icon = GFX_goal_tripartite_pact
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_war_of_the_rough_wooing }
+		mutually_exclusive = { focus = ENG_end_the_war }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_war = no
+		}
+		completion_reward = {
+			add_war_support = 0.05
+create_wargoal = {
+type = annex_everything
+target = FRA
+}
+if = {
+limit = { SCO = { exists = yes } }
+create_wargoal = {
+type = annex_everything
+target = SCO
+}
+}
+		}
+	}
+
+	#Focus for The Royal Navy
+	focus = {
+		id = ENG_the_royal_navy
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_our_military }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			131 = {
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = dockyard
+level = 2
+instant_build = yes
+}
+}
+navy_experience = 15
+		}
+	}
+
+	#Focus for Establish a More Fair Parliament
+	focus = {
+		id = ENG_establish_a_more_fair_parliament
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_freedom_of_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = democratic
+popularity = 0.2
+}
+set_politics = { ruling_party = democratic elections_allowed = yes }
+		}
+	}
+
+	#Focus for Status Quo Support
+	focus = {
+		id = ENG_status_quo_support
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 42
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_religious_freedom }
+		mutually_exclusive = { focus = ENG_freedom_of_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+add_political_power = 50
+		}
+	}
+
+	#Focus for Careful Middle Ground
+	focus = {
+		id = ENG_careful_middle_ground
+		icon = GFX_focus_generic_military_academy
+		x = 41
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_religious_focus }
+		mutually_exclusive = { 
+			focus = ENG_turn_back_to_the_pope 
+		}
+		mutually_exclusive = { 
+			focus = ENG_continue_protestantism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = reformed
+		}
+	}
+
+	#Focus for Religious Freedom
+	focus = {
+		id = ENG_religious_freedom
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 41
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_careful_middle_ground }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Freedom of the People
+	focus = {
+		id = ENG_freedom_of_the_people
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 40
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_religious_freedom }
+		mutually_exclusive = { focus = ENG_status_quo_support }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = communism
+popularity = 0.2
+}
+add_popularity = {
+ideology = democratic
+popularity = 0.2
+}
+		}
+	}
+
+	#Focus for Long May He Reign!
+	focus = {
+		id = ENG_long_may_he_reign
+		icon = GFX_focus_eng_god_save_the_king
+		x = 42
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_status_quo_support }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.075
+add_ideas = why_we_fight_focus
+set_rule = { can_create_factions = yes }
+		}
+	}
+
+	#Focus for Burn The Magna Carta
+	focus = {
+		id = ENG_burn_the_magna_carta
+		icon = GFX_goal_generic_forceful_treaty
+		x = 44
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_dethrone_the_tudors }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = neutrality
+popularity = -0.2
+}
+add_stability = -0.075
+add_political_power = 25
+		}
+	}
+
+	#Focus for Invade Canada
+	focus = {
+		id = ENG_invade_canada
+		icon = GFX_focus_spa_the_war_of_vengeance
+		x = 18
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_war_with_the_natives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_state = {
+limit = { is_owned_by = FRA is_on_continent = north_america }
+add_claim_by = ENG
+}
+		}
+	}
+
+	#Focus for Puppets in America
+	focus = {
+		id = ENG_puppets_in_america
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 15
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_american_colonies }
+		mutually_exclusive = { focus = ENG_direct_control_of_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG }
+add_compliance = 15
+add_resistance = -5
+}
+}
+		}
+
+	#Focus for A Fully Industrialized America
+	focus = {
+		id = ENG_a_fully_industrialized_america
+		icon = GFX_focus_generic_industry_3
+		x = 16
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_expand_american_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for All Roads Lead To England
+	focus = {
+		id = ENG_all_roads_lead_to_england
+		icon = GFX_goal_generic_construct_civilian
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_civilian_production_i 
+		}
+		prerequisite = { 
+			focus = ENG_clear_land_i 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { free_building_slots = { building = infrastructure size > 1 } }
+add_building_construction = {type = infrastructure level = 2
+instant_build = yes }
+}
+random_owned_controlled_state = {
+limit = { free_building_slots = { building = infrastructure size > 1 } }
+add_building_construction = {type = infrastructure level = 2
+instant_build = yes }
+}
+random_owned_controlled_state = {
+limit = { free_building_slots = { building = infrastructure size > 0 } }
+add_building_construction = {type = infrastructure level = 1
+instant_build = yes }
+}
+random_owned_controlled_state = {
+limit = { free_building_slots = { building = infrastructure size > 0 } }
+add_building_construction = {type = infrastructure level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Core Scotland High Lands
+	focus = {
+		id = ENG_core_scotland_high_lands
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_continue_the_war }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = { is_core_of = SCO }
+NOT = {
+has_war_with = SCO
+}
+		}
+		completion_reward = {
+			any_owned_state = {
+limit = { is_core_of = SCO }
+add_core_of = ENG
+}
+		}
+	}
+
+	#Focus for Faction with Scotland
+	focus = {
+		id = ENG_faction_with_scotland
+		icon = GFX_goal_tripartite_pact
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ally_scotland }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = {
+has_opinion = { target = ENG value > 50 }
+}
+		}
+		completion_reward = {
+			create_faction = ENG_SCO_PACT
+add_to_faction = SCO
+		}
+	}
+
+	#Focus for Ally Scotland
+	focus = {
+		id = ENG_ally_scotland
+		icon = GFX_goal_tripartite_pact
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_end_the_war }
+		mutually_exclusive = { focus = ENG_angloscottish_rivalry }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { 
+target = SCO
+modifier = attache_sent 
+}
+SCO = {
+add_opinion_modifier = { 
+target = ENG
+modifier = attache_sent 
+}
+}
+		}
+	}
+
+	#Focus for Anglo-Scottish Rivalry
+	focus = {
+		id = ENG_angloscottish_rivalry
+		icon = GFX_ENG_angloscottish_rivalry-29474
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_end_the_war }
+		mutually_exclusive = { focus = ENG_ally_scotland }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = SCO 
+modifier = hostile_status 
+}
+SCO = {
+add_opinion_modifier= { 
+target = ENG
+modifier = hostile_status 
+}
+}
+		}
+	}
+
+	#Focus for Anglo Scottish Union
+	focus = {
+		id = ENG_anglo_scottish_union
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 2
+		y = 6
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_investment_in_scotland }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = {
+is_in_faction_with = ENG
+}
+		}
+		completion_reward = {
+			annex_country= {
+ target = SCO 
+}
+add_political_power = 75
+		}
+	}
+
+	#Focus for Investment in Scotland
+	focus = {
+		id = ENG_investment_in_scotland
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_faction_with_scotland }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { is_in_faction_with = ENG }
+		}
+		completion_reward = {
+			add_political_power = -50 
+add_stability = 0.05 
+add_offsite_building = { type = industrial_complex level = 1 }
+SCO = {
+add_offsite_building = { type = industrial_complex level = 2 }
+}
+		}
+	}
+
+	#Focus for Burn Books
+	focus = {
+		id = ENG_burn_books
+		icon = GFX_goal_generic_forceful_treaty
+		x = 52
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_increase_policing }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for War with the Natives
+	focus = {
+		id = ENG_war_with_the_natives
+		icon = GFX_goal_generic_occupy_start_war
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_found_jamestown }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.025
+create_wargoal= { 
+type = annex_everything 
+target = CHE
+expire = 0
+}
+create_wargoal= { 
+type = annex_everything 
+target = POW
+expire = 0
+}
+		}
+	}
+
+	#Focus for Free Speech
+	focus = {
+		id = ENG_free_speech
+		icon = GFX_focus_generic_treaty
+		x = 54
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_censor_writing }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.02
+add_political_power = 30
+		}
+	}
+
+	#Focus for Censor Writing
+	focus = {
+		id = ENG_censor_writing
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 52
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_free_speech }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_political_power = -25
+		}
+	}
+
+	#Focus for Reform the Book of Common Prayer
+	focus = {
+		id = ENG_reform_the_book_of_common_prayer
+		icon = GFX_focus_generic_treaty
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_peacefully_separate }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = british_austerity_idea
+add_stability = 0.05
+add_political_power = 50
+		}
+	}
+
+	#Focus for Artillery Improvement
+	focus = {
+		id = ENG_artillery_improvement
+		icon = GFX_goal_generic_army_artillery2
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_equipment_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.5
+uses = 2
+category = artillery 
+}
+		}
+	}
+
+	#Focus for Tactics Study
+	focus = {
+		id = ENG_tactics_study
+		icon = GFX_goal_generic_army_doctrines
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_equipment_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 1.5 
+uses = 1
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Navy Doctrine Focus
+	focus = {
+		id = ENG_navy_doctrine_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_royal_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 10
+add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 2
+bonus = 1.0
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Lighter Ships
+	focus = {
+		id = ENG_lighter_ships
+		icon = GFX_goal_generic_wolf_pack
+		x = 29
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_royal_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = dd_bonus
+bonus = 1.0
+uses = 2
+category = dd_tech
+category = cl_tech
+}
+		}
+	}
+
+	#Focus for Purge Protestants
+	focus = {
+		id = ENG_purge_protestants
+		icon = GFX_focus_eng_organise_the_blackshirts
+		x = 36
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_return_to_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date < 1558
+has_idea = catholic
+		}
+		completion_reward = {
+			add_manpower = -300
+add_stability = 0.05
+add_political_power = 75
+		}
+	}
+
+	#Focus for Invest into Austria
+	focus = {
+		id = ENG_invest_into_austria
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ponder_foreign_investments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = AUS modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+AUS = {
+add_opinion_modifier = { target = ENG modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+}
+		}
+	}
+
+	#Focus for Invest into Spain
+	focus = {
+		id = ENG_invest_into_spain
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ponder_foreign_investments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = SPR modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+SPR = {
+add_opinion_modifier = { target = ENG modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+}
+		}
+	}
+
+	#Focus for Expand American Industry
+	focus = {
+		id = ENG_expand_american_industry
+		icon = GFX_focus_generic_industry_2
+		x = 16
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_puppets_in_america 
+			focus = ENG_direct_control_of_the_americas 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Direct Control of the Americas
+	focus = {
+		id = ENG_direct_control_of_the_americas
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 17
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_american_colonies }
+		mutually_exclusive = { focus = ENG_puppets_in_america }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+		}
+	}
+
+	#Focus for Force Ireland to Protestantism
+	focus = {
+		id = ENG_force_ireland_to_protestantism
+		icon = GFX_goal_generic_territory_or_war
+		x = 35
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_aggressive_action }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IRE = {
+add_ideas = protestant
+add_stability = -0.05
+}
+add_political_power = 25
+		}
+	}
+
+	#Focus for Settle the Caribbean
+	focus = {
+		id = ENG_settle_the_caribbean
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 18
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 474
+add_political_power = 25
+		}
+	}
+
+	#Focus for Clear Land II
+	focus = {
+		id = ENG_clear_land_ii
+		icon = GFX_goal_generic_construction2
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_all_roads_lead_to_england }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Clear Land III
+	focus = {
+		id = ENG_clear_land_iii
+		icon = GFX_goal_generic_construct_civilian
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_clear_land_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Civilian Production IV
+	focus = {
+		id = ENG_civilian_production_iv
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 21
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_civilian_production_iii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = industrial_complex
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Turn to the Americas
+	focus = {
+		id = ENG_turn_to_the_americas
+		icon = GFX_focus_spa_the_war_of_vengeance
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_inspired_to_colonize }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Inspired to Colonize
+	focus = {
+		id = ENG_inspired_to_colonize
+		icon = GFX_focus_eng_decolonization
+		x = 19
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_clear_land_iii 
+		}
+		prerequisite = { 
+			focus = ENG_scientific_superiority 
+		}
+		prerequisite = { 
+			focus = ENG_civilian_production_iv 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 75
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Found Jamestown
+	focus = {
+		id = ENG_found_jamestown
+		icon = GFX_goal_generic_territory_or_war
+		x = 16
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 362
+add_political_power = 25
+		}
+	}
+
+	#Focus for Suppress French Resistance
+	focus = {
+		id = ENG_suppress_french_resistance
+		icon = GFX_goal_continuous_suppression
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_core_scotland_high_lands }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NOT = {
+has_war_with = FRA
+}
+		}
+		completion_reward = {
+			any_owned_state = {
+limit = { is_core_of = FRA }
+add_resistance = -25
+add_compliance = 10
+}
+		}
+	}
+
+	#Focus for Clear Land I
+	focus = {
+		id = ENG_clear_land_i
+		icon = GFX_goal_generic_construction2
+		x = 17
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_england }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Weapon Production II
+	focus = {
+		id = ENG_weapon_production_ii
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_a_weapon_in_every_hand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = arms_factory
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Weapon Production III
+	focus = {
+		id = ENG_weapon_production_iii
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_weapon_production_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = arms_factory
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Conqeur Southern Africa
+	focus = {
+		id = ENG_conqeur_southern_africa
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_take_cape_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 719
+transfer_state = 541
+add_political_power = 25
+add_stability = -0.01
+		}
+	}
+
+	#Focus for Civilian Production III
+	focus = {
+		id = ENG_civilian_production_iii
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_civilian_production_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = { 
+type = industrial_complex
+level = 1
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Modern Equipment
+	focus = {
+		id = ENG_modern_equipment
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 26
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_equipment_ii }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 0.75
+ahead_reduction = 1
+uses = 2
+category =  infantry_weapons
+}
+		}
+	}
+
+	#Focus for Versatile Doctrine
+	focus = {
+		id = ENG_versatile_doctrine
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_tactics_study }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { 
+name = land_doc_bonus 
+bonus = 0.75 
+uses = 2
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Request Greenland
+	focus = {
+		id = ENG_request_greenland
+		icon = GFX_goal_demand_sudetenland
+		x = 14
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_spread_to_the_appalachians }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 101
+add_war_support = 0.05
+		}
+	}
+
+	#Focus for Modern Artillery
+	focus = {
+		id = ENG_modern_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_artillery_improvement }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.0
+ahead_reduction = 1
+uses = 1
+category = artillery 
+}
+		}
+	}
+
+	#Focus for The Marines Are Coming
+	focus = {
+		id = ENG_the_marines_are_coming
+		icon = GFX_goal_generic_amphibious_assault
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_our_infantry 
+		}
+		prerequisite = { 
+			focus = ENG_the_royal_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = USA_amphibious_operations
+bonus = 0.8
+uses = 2
+category = tp_tech 
+}
+add_tech_bonus = { 
+name = special_forces_bonus
+bonus = 0.8
+uses = 2
+technology = marines
+technology = marines2
+technology = marines3
+}
+		}
+	}
+
+	#Focus for Improve Equipment I
+	focus = {
+		id = ENG_improve_equipment_i
+		icon = GFX_focus_secret_rearmament
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_our_infantry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.25
+uses = 1
+category =  infantry_weapons 
+category = artillery 
+}
+		}
+	}
+
+	#Focus for Modern Destroyers
+	focus = {
+		id = ENG_modern_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 28
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_lighter_ships }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = dd_bonus
+bonus = 1.5
+ahead_reduction = 2
+uses = 1
+category = dd_tech
+}
+		}
+	}
+
+	#Focus for Modern Battleships
+	focus = {
+		id = ENG_modern_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		x = 32
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ships_of_the_line }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = capital_ships_bonus
+bonus = 1.0
+ahead_reduction = 1
+uses = 2
+category = bc_tech
+category = bb_tech
+}
+		}
+	}
+
+	#Focus for Anglo Irish Alliance
+	focus = {
+		id = ENG_anglo_irish_alliance
+		icon = GFX_goal_generic_position_armies
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_bring_the_irish_into_the_rivalry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IRE = {
+add_state_core = 797
+transfer_state = 797
+}
+remove_state_core = 345
+		}
+	}
+
+	#Focus for Bring the Irish into the Rivalry
+	focus = {
+		id = ENG_bring_the_irish_into_the_rivalry
+		icon = GFX_goal_generic_improve_relations
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_angloscottish_rivalry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IRE = {
+add_opinion_modifier = { target = ENG modifier = offered_support }
+}
+add_opinion_modifier = { target = IRE modifier = offered_support }
+		}
+	}
+
+	#Focus for Ships of the Line
+	focus = {
+		id = ENG_ships_of_the_line
+		icon = GFX_goal_generic_navy_battleship
+		x = 31
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_royal_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+name = capital_ships_bonus
+bonus = 1.0
+ahead_reduction = 1
+uses = 2
+category = bc_tech
+category = bb_tech
+category = ca_tech
+}
+		}
+	}
+
+	#Focus for Improve Equipment II
+	focus = {
+		id = ENG_improve_equipment_ii
+		icon = GFX_goal_generic_occupy_start_war
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_equipment_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+bonus = 1.0
+ahead_reduction = 1
+uses = 1
+category =  infantry_weapons
+}
+		}
+	}
+
+	#Focus for Solidify Power
+	focus = {
+		id = ENG_solidify_power
+		icon = GFX_focus_generic_manpower
+		x = 44
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_burn_the_magna_carta }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = fascism
+popularity = 0.2
+}
+add_stability = 0.05
+add_political_power = -25
+		}
+	}
+
+	#Focus for Civilian Production II
+	focus = {
+		id = ENG_civilian_production_ii
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_civilian_production_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+add_extra_state_shared_building_slots = 2
+add_building_construction = { 
+type = industrial_complex
+level = 2
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Scientific Superiority
+	focus = {
+		id = ENG_scientific_superiority
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_invest_in_research }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 60
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Increased Inflation
+	focus = {
+		id = ENG_increased_inflation
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 15
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_england }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.075
+		}
+	}
+
+	#Focus for A Foothold on the Continent
+	focus = {
+		id = ENG_a_foothold_on_the_continent
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_suppress_french_resistance }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+has_war_with = FRA
+}
+		}
+		completion_reward = {
+			any_owned_state = {
+limit = { is_core_of = FRA }
+add_core_of = ENG
+}
+		}
+	}
+
+	#Focus for War Department
+	focus = {
+		id = ENG_war_department
+		icon = GFX_goal_generic_army_doctrines
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_improve_command_structure }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = USA_war_department
+		}
+	}
+
+	#Focus for Invest into Denmark
+	focus = {
+		id = ENG_invest_into_denmark
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_ponder_foreign_investments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = DEN modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+DEN = {
+add_opinion_modifier = { target = ENG modifier = offered_support }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+}
+		}
+	}
+
+	#Focus for Puppets in Africa
+	focus = {
+		id = ENG_puppets_in_africa
+		icon = GFX_focus_CZE_german_puppet
+		x = 22
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_african_colonies }
+		mutually_exclusive = { focus = ENG_direct_control_of_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SAF = {
+all_state = {
+limit = { is_owned_by = ENG }
+add_core_of = SAF
+}
+transfer_state = 719
+transfer_state = 275
+transfer_state = 681
+}
+puppet = SAF
+add_stability = 0.025
+		}
+	}
+
+	#Focus for Direct Control of Africa
+	focus = {
+		id = ENG_direct_control_of_africa
+		icon = GFX_goal_generic_political_pressure
+		x = 20
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_african_colonies }
+		mutually_exclusive = { focus = ENG_puppets_in_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = africa NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa is_coastal = yes NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+		}
+	}
+
+	#Focus for Return to Catholicism
+	focus = {
+		id = ENG_return_to_catholicism
+		icon = GFX_focus_spa_eliminate_the_carlists
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1553.7.1
+NOT = { has_idea = catholic }
+		}
+		completion_reward = {
+			add_ideas = catholic
+add_stability = -0.05
+		}
+	}
+
+	#Focus for Rioting Masses
+	focus = {
+		id = ENG_rioting_masses
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 39
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_establish_a_more_fair_parliament }
+		mutually_exclusive = { focus = ENG_beacon_of_democracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = communism
+popularity = 0.35
+}
+set_politics = { ruling_party = communism elections_allowed = no }
+add_stability = -0.15
+		}
+	}
+
+	#Focus for Spread to the Appalachians
+	focus = {
+		id = ENG_spread_to_the_appalachians
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_found_jamestown }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 363
+transfer_state = 364
+transfer_state = 365
+transfer_state = 815
+transfer_state = 360
+transfer_state = 359
+transfer_state = 834
+transfer_state = 813
+transfer_state = 358
+transfer_state = 814
+		}
+	}
+
+	#Focus for Build up American Colonies
+	focus = {
+		id = ENG_build_up_american_colonies
+		icon = GFX_focus_generic_industry_1
+		x = 16
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_spread_to_the_appalachians 
+			focus = ENG_war_with_the_natives 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Beacon of Democracy
+	focus = {
+		id = ENG_beacon_of_democracy
+		icon = GFX_goal_support_democracy
+		x = 41
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_establish_a_more_fair_parliament }
+		mutually_exclusive = { focus = ENG_rioting_masses }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_country = {
+limit = { any_owned_state = { is_on_continent = europe } NOT = { has_government = democratic } }
+add_ideas = democratic_drift
+}
+random_country = {
+limit = { any_owned_state = { is_on_continent = europe } NOT = { has_government = democratic } }
+add_ideas = democratic_drift
+}
+		}
+	}
+
+	#Focus for Marry Phillip of Spain
+	focus = {
+		id = ENG_marry_phillip_of_spain
+		icon = GFX_goal_tripartite_pact
+		x = 38
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_return_to_catholicism }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			date < 1558
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = SPR 
+modifier = attache_sent 
+}
+SPR = {
+add_opinion_modifier= { 
+target = ENG 
+modifier = attache_sent 
+}
+}
+add_stability = -0.1
+add_political_power = 75
+hidden_effect = {
+if = {
+limit = { has_stability < 0.5 }
+start_civil_war = {
+    ideology = communism
+    size = 0.25
+}
+}
+}
+		}
+	}
+
+	#Focus for Settle the Midlands of Ireland
+	focus = {
+		id = ENG_settle_the_midlands_of_ireland
+		icon = GFX_goal_generic_demand_territory
+		x = 40
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_return_to_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 113
+add_war_support = 0.02
+create_wargoal = {
+	type = take_state_focus
+	target = IRE
+	generator = { 113 }
+}
+		}
+	}
+
+	#Focus for Join Spain against the French
+	focus = {
+		id = ENG_join_spain_against_the_french
+		icon = GFX_focus_attack_france
+		x = 38
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_marry_phillip_of_spain }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SPR = { has_war_with = FRA }
+		}
+		completion_reward = {
+			declare_war_on= { 
+target = FRA
+type = annex_everything 
+}
+		}
+	}
+
+	#Focus for Bringing Back Protestantism
+	focus = {
+		id = ENG_bringing_back_protestantism
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 32
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_return_to_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_idea = catholic
+date > 1558.11.17
+		}
+		completion_reward = {
+			add_ideas = protestant
+add_stability = -0.05
+add_political_power = 50
+add_popularity = {
+ideology = fascism
+popularity = 0.5
+}
+set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+	}
+
+	#Focus for Marry Robert Dudley
+	focus = {
+		id = ENG_marry_robert_dudley
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 31
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_to_marry_or_not_to_marry }
+		mutually_exclusive = { focus = ENG_look_to_foreigners_for_marriage }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1560.10.1
+		}
+		completion_reward = {
+			add_stability = -0.1
+hidden_effect = {
+if = {
+limit = { has_stability < 0.5 }
+start_civil_war = {
+    ideology = neutrality
+    size = 0.4
+}
+}
+}
+		}
+	}
+
+	#Focus for Look to Foreigners for Marriage
+	focus = {
+		id = ENG_look_to_foreigners_for_marriage
+		icon = GFX_focus_generic_monarchy_1
+		x = 27
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_to_marry_or_not_to_marry }
+		mutually_exclusive = { focus = ENG_marry_robert_dudley }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = -0.025
+add_political_power = 30
+		}
+	}
+
+	#Focus for Vye for Eric XIV's Affections
+	focus = {
+		id = ENG_vye_for_eric_xivs_affections
+		icon = GFX_focus_rom_parties_end
+		x = 25
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_look_to_foreigners_for_marriage }
+		mutually_exclusive = { focus = ENG_do_not_marry }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date < 1568.1.1
+NOT = { has_war_with = SWE }
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = SWE
+modifier = attache_sent 
+}
+SWE = {
+add_political_power = 25
+add_opinion_modifier= { 
+target = ENG 
+modifier = attache_sent 
+}
+}
+add_stability = 0.05
+add_political_power = 50
+		}
+	}
+
+	#Focus for Vye for Charles of Austria's Affection
+	focus = {
+		id = ENG_vye_for_charles_of_austrias_affection
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		x = 29
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_look_to_foreigners_for_marriage }
+		mutually_exclusive = { focus = ENG_do_not_marry }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date < 1569.1.1
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = AUS 
+modifier = attache_sent 
+}
+AUS = {
+add_opinion_modifier= { 
+target = ENG 
+modifier = attache_sent 
+}
+}
+add_stability = 0.05
+		}
+	}
+
+	#Focus for Do Not Marry
+	focus = {
+		id = ENG_do_not_marry
+		icon = GFX_focus_rom_handle_king
+		x = 27
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_look_to_foreigners_for_marriage }
+		mutually_exclusive = { 
+			focus = ENG_vye_for_eric_xivs_affections 
+		}
+		mutually_exclusive = { 
+			focus = ENG_vye_for_charles_of_austrias_affection 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+add_political_power = 25
+		}
+	}
+
+	#Focus for Expand Jobs
+	focus = {
+		id = ENG_expand_jobs
+		icon = GFX_goal_generic_production ##Unfortunately, the tool could not find your icon in the game's files
+		x = 31
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_marry_robert_dudley }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.075
+add_ideas = ENG_trade_union_factory_worker_support
+		}
+	}
+
+	#Focus for Rising Tension with Scotland
+	focus = {
+		id = ENG_rising_tension_with_scotland
+		icon = GFX_goal_continuous_boost_freedom
+		x = 34
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_bringing_back_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { exists = yes }
+NOT = {
+has_war_with = SCO
+}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+add_opinion_modifier = { target = SCO modifier = minor_sanctions_relations }
+SCO = { 
+add_opinion_modifier = { target = SCO modifier = minor_sanctions_relations }
+}
+		}
+	}
+
+	#Focus for To Marry, or Not to Marry?
+	focus = {
+		id = ENG_to_marry_or_not_to_marry
+		icon = GFX_goal_generic_propaganda
+		x = 29
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_bringing_back_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Oppress Scottish Catholicism
+	focus = {
+		id = ENG_oppress_scottish_catholicism
+		icon = GFX_focus_rom_abdicate
+		x = 33
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_forced_oversight }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { is_subject_of = ENG exists = yes }
+		}
+		completion_reward = {
+			SCO = {
+add_idea = protestant
+}
+		}
+	}
+
+	#Focus for Scottish Protestant Uprising
+	focus = {
+		id = ENG_scottish_protestant_uprising
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 34
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_inspire_unrest_in_scotland }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { exists = yes is_subject = no }
+OR = {
+AND = { SCO = { has_government = neutrality democratic > 0.3 } }
+AND = { SCO = { has_government = fascism neutrality > 0.3 } }
+}
+		}
+		completion_reward = {
+			if = {
+limit = { SCO = { has_government = fascism } }
+SCO = {
+start_civil_war = {
+ ideology = neutrality
+size = 0.4 
+}
+}
+}
+if = {
+limit = { SCO = { has_government = neutrality } }
+SCO = {
+start_civil_war = {
+ ideology = democratic
+size = 0.4 
+}
+}
+}
+create_wargoal = {
+type = topple_government
+target = SCO
+}
+		}
+	}
+
+	#Focus for Execute John Dudley
+	focus = {
+		id = ENG_execute_john_dudley
+		icon = GFX_focus_mex_exile_calles
+		x = 37
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_return_to_catholicism }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			date > 1533.
+		}
+	}
+
+	#Focus for Help Publish Cranmer's 42 Articles
+	focus = {
+		id = ENG_help_publish_cranmers_42_articles
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_regent_john_dudley }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1553.1.1
+		}
+		completion_reward = {
+			if = {
+limit = { NOT = { has_idea = protestant } }
+add_stability = -0.05
+}
+if = {
+limit = { has_idea = protestant }
+add_stability = 0.025
+add_political_power = 15
+}
+		}
+	}
+
+	#Focus for Aid The Huguenots
+	focus = {
+		id = ENG_aid_the_huguenots
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 32
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_bringing_back_protestantism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = { has_civil_war = yes }
+		}
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	#Focus for Forced Integration
+	focus = {
+		id = ENG_forced_integration
+		icon = GFX_goal_generic_territory_or_war
+		x = 35
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_rising_tension_with_scotland }
+		mutually_exclusive = { focus = ENG_forced_oversight }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SCO = { exists = yes is_subject = no }
+NOT = { has_war_with = SCO }
+		}
+		completion_reward = {
+			create_wargoal = {
+type = annex_everything
+target = SCO
+}
+		}
+	}
+
+	#Focus for Forced Oversight
+	focus = {
+		id = ENG_forced_oversight
+		icon = GFX_focus_CZE_german_puppet
+		x = 33
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_rising_tension_with_scotland }
+		mutually_exclusive = { focus = ENG_forced_integration }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+target = SCO
+type = puppet_wargoal_focus
+expire = 0 
+}
+		}
+	}
+
+	#Focus for Strengthen Parliament II
+	focus = {
+		id = ENG_strengthen_parliament_ii
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 47
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_strengthen_parliament_i 
+			focus = ENG_strengthen_royal_power_i 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_popularity = {
+ideology = democratic
+popularity = 0.1
+}
+add_political_power = -50
+		}
+	}
+
+	#Focus for Strengthen Parliament I
+	focus = {
+		id = ENG_strengthen_parliament_i
+		icon = GFX_focus_generic_treaty
+		x = 47
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_strengthen_royal_power_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_popularity = {
+ideology = democratic
+popularity = 0.1
+}
+add_political_power = -50
+		}
+	}
+
+	#Focus for Strengthen Royal Power I
+	focus = {
+		id = ENG_strengthen_royal_power_i
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 49
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_strengthen_parliament_i }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.025
+add_popularity = {
+ideology = neutrality
+popularity = 0.05
+}
+add_popularity = {
+ideology = fascism
+popularity = 0.05
+}
+add_political_power = 50
+		}
+	}
+
+	#Focus for Naval Superpower
+	focus = {
+		id = ENG_naval_superpower
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_aim_for_naval_dominance }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 120
+add_tech_bonus = {
+name = USA_fund_the_navy
+uses = 1
+bonus = 1.0
+category = naval_doctrine
+}
+		}
+	}
+
+	#Focus for Increase Policing
+	focus = {
+		id = ENG_increase_policing
+		icon = GFX_goal_generic_political_pressure
+		x = 52
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_censor_writing }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.025
+add_political_power = -25
+		}
+	}
+
+	#Focus for Promote Nationalistic Writing
+	focus = {
+		id = ENG_promote_nationalistic_writing
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 54
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_free_speech }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+add_political_power = 50
+		}
+	}
+
+	#Focus for Further Industrialize Africa
+	focus = {
+		id = ENG_further_industrialize_africa
+		icon = GFX_focus_generic_africa_factory
+		x = 21
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_puppets_in_africa 
+			focus = ENG_direct_control_of_africa 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			681 = {
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
 		}
 	}
 

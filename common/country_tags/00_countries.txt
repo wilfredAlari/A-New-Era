@@ -272,6 +272,20 @@ BPC	= "countries/Colonial Brazil.txt"
 IRO	= "countries/Irokez.txt"
 CRE	= "countries/Cri.txt"
 
+DJE = "countries/Djerid.txt"
+
+###Arabia
+MAH = "countries/Mahra.txt"
+RAS = "countries/Rassids.txt"
+ANI = "countries/Anizah.txt"
+SHA = "countries/Shamar.txt"
+DAW = "countries/Dawasir.txt"
+HAD = "countries/Hadramut.txt"
+HOR = "countries/Hormuz.txt"
+YAS = "countries/Yas.txt"
+NAJ = "countries/Najran.txt"
+MIK = "countries/Mikhlaf.txt"
+
 ###West Asia
 KAZ = "countries/Kazakh.txt" 
 KHI = "countries/Khiva.txt"

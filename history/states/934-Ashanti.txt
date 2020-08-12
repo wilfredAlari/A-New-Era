@@ -1,0 +1,18 @@
+state={
+	id=934
+	name="STATE_934"
+
+	history={
+		owner = AHN
+		add_core_of = AHN
+		
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower = 93734
+	provinces={
+		5013 8039 8096 8122 12787 13234 13236
+	}
+	state_category = pastoral
+}

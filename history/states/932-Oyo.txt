@@ -1,0 +1,22 @@
+state={
+	id=932
+	name="STATE_932"
+	
+	history={
+		owner = OYO
+		add_core_of = OYO
+		victory_points = {
+			4948 5 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+
+	}
+	manpower = 130495
+	provinces= {
+		12731 12762 12817 12874 12900 13238
+	}
+	state_category = rural
+}

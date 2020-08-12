@@ -156,7 +156,7 @@ CMR = "countries/Cameroon.txt"
 CAR = "countries/Central African Republic.txt"
 CHA = "countries/Chad.txt"
 NGA = "countries/Nigeria.txt"
-DAH = "countries/Dahomey.txt"
+DHM = "countries/Dahomey.txt"
 TOG = "countries/Togo.txt"
 GHA = "countries/Ghana.txt"
 IVO = "countries/Ivory Coast.txt"
@@ -272,20 +272,6 @@ BPC	= "countries/Colonial Brazil.txt"
 IRO	= "countries/Irokez.txt"
 CRE	= "countries/Cri.txt"
 
-DJE = "countries/Djerid.txt"
-
-###Arabia
-MAH = "countries/Mahra.txt"
-RAS = "countries/Rassids.txt"
-ANI = "countries/Anizah.txt"
-SHA = "countries/Shamar.txt"
-DAW = "countries/Dawasir.txt"
-HAD = "countries/Hadramut.txt"
-HOR = "countries/Hormuz.txt"
-YAS = "countries/Yas.txt"
-NAJ = "countries/Najran.txt"
-MIK = "countries/Mikhlaf.txt"
-
 ###West Asia
 KAZ = "countries/Kazakh.txt" 
 KHI = "countries/Khiva.txt"
@@ -294,5 +280,11 @@ BUK = "countries/Bukhara.txt"
 MUG = "countries/Mughals.txt"
 
 RUS = "countries/Russia.txt"
+
+###Africa
+BNN = "countries/Benin.txt"
+JLF = "countries/Jolof.txt"
+OYO = "countries/Oyo.txt"
+AHN = "countries/Ashanti.txt"
 
 

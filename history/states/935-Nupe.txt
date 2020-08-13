@@ -1,0 +1,22 @@
+state={
+	id=935
+	name="STATE_935"
+
+	history={
+		owner = XXX
+		add_core_of = XXX
+
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1932 2025 8021
+	}
+	manpower=91346
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

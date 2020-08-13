@@ -286,5 +286,7 @@ BNN = "countries/Benin.txt"
 JLF = "countries/Jolof.txt"
 OYO = "countries/Oyo.txt"
 AHN = "countries/Ashanti.txt"
-
+NPE = "countries/Nupe.txt"
+KNO = "countries/Kano.txt"
+MSI = "countries/Mossi.txt"
 
